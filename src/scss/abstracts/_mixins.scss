@@ -1,0 +1,38 @@
+@mixin flex($direction, $justify, $align, $gap: null) {
+	display: flex;
+	flex-direction: $direction;
+	justify-content: $justify;
+	align-items: $align;
+	@if $gap != null {
+		gap: $gap;
+	}
+}
+
+@mixin transition {
+	-webkit-transition: all 0.3s ease-out;
+	-moz-transition: all 0.3s ease-out;
+	-o-transition: all 0.3s ease-out;
+	transition: all 0.3s ease-out;
+}
+
+@mixin center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+@mixin box($width, $height: $width, $radius: null) {
+	width: $width;
+	height: $height;
+
+	@if $radius != null {
+		border-radius: $radius;
+	}
+}
+
+@mixin text-style($size, $weight: 400, $line-height: normal, $align: left) {
+	font-size: rem($size);
+	font-weight: $weight;
+	line-height: $line-height;
+	text-align: $align;
+}

@@ -1,0 +1,19 @@
+@use '../abstracts' as *;
+
+* {
+	box-sizing: border-box;
+}
+
+html,
+body {
+	scroll-behavior: smooth;
+	font-style: normal;
+	font-weight: 400;
+	font-family: $font-primary;
+	background: $white;
+	color: $black;
+}
+
+button {
+	cursor: pointer;
+}
