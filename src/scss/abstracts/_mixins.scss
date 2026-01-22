@@ -31,7 +31,7 @@
 }
 
 @mixin text-style($size, $weight: 400, $line-height: normal, $align: left) {
-	font-size: rem($size);
+	font-size: $size;
 	font-weight: $weight;
 	line-height: $line-height;
 	text-align: $align;

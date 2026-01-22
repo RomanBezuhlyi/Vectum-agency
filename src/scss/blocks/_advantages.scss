@@ -1,0 +1,104 @@
+@use '../abstracts' as *;
+
+.advantages-wrap {
+	background: url(../img/bg-advantages.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	padding: 50px 0;
+	@media (max-width: 1024px) {
+		padding: 40px 0 70px 0;
+	}
+	@media (max-width: 767px) {
+		padding: 50px 0;
+	}
+}
+.advantages {
+	padding: 50px 30px;
+	border-radius: 40px;
+	background: rgba(146, 146, 146, 0.1);
+	backdrop-filter: blur(40px);
+	@media (max-width: 1024px) {
+		padding: 30px;
+	}
+	@media (max-width: 767px) {
+		padding: 10px 5px;
+		border-radius: 20px;
+	}
+	&__title {
+		@include text-style(40px, 400, 42px, center);
+		margin-bottom: 20px;
+		@media (max-width: 1024px) {
+			@include text-style(32px, 400, 34px, center);
+			margin-bottom: 10px;
+		}
+		@media (max-width: 767px) {
+			@include text-style(24px, 400, 28px, center);
+		}
+	}
+
+	&__text {
+		max-width: 488px;
+		width: 100%;
+		color: $grey;
+		@include text-style(16px, 400, 20px, center);
+		margin: auto;
+		margin-bottom: 20px;
+		@media (max-width: 767px) {
+			@include text-style(14px, 400, 16px, center);
+		}
+	}
+
+	&__list {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 9px;
+		@media (max-width: 1024px) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+
+	&__item {
+		padding: 5px 10px;
+		border-radius: 10px;
+		background: $white;
+		min-height: 230px;
+		@media (max-width: 1024px) {
+			min-height: 250px;
+		}
+		@media (max-width: 767px) {
+			max-height: 268px;
+			padding: 5px;
+		}
+	}
+
+	&__item-img {
+		margin: auto;
+		margin-bottom: 20px;
+		@media (max-width: 1024px) {
+			margin-bottom: 10px;
+		}
+	}
+
+	&__item-title {
+		@include text-style(20px, 500, 20px);
+		margin-bottom: 10px;
+		@media (max-width: 1024px) {
+			@include text-style(16px, 500, 18px);
+		}
+		@media (max-width: 767px) {
+			margin-bottom: 5px;
+		}
+	}
+
+	&__item-text {
+		color: $grey;
+		@include text-style(16px, 400, 20px);
+		@media (max-width: 1024px) {
+			@include text-style(16px, 400, 18px);
+		}
+		@media (max-width: 767px) {
+			@include text-style(11px, 400, 14px);
+		}
+	}
+}

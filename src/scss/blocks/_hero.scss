@@ -1,0 +1,200 @@
+@use '../abstracts' as *;
+
+.hero-wrap {
+	background-image: url(../img/hero.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: bottom right;
+	@media (max-width: 1024px) {
+		background-image: url(../img/hero-tablet.png);
+	}
+}
+
+.hero {
+	padding: 50px 0 100px 0;
+	@include flex(row, space-between, flex-start, 20px);
+	height: calc(100vh - 87px);
+	@media (max-width: 1024px) {
+		padding: 40px 0 110px 0;
+	}
+	@media (max-width: 767px) {
+		padding: 20px 0;
+		height: calc(100vh - 63px);
+	}
+	&__left {
+		@include flex(column, space-between, flex-start);
+		max-width: 709px;
+		width: 100%;
+		height: 100%;
+		@media (max-width: 1024px) {
+			justify-content: flex-start;
+		}
+	}
+
+	&__left-top {
+		@include flex(column, flex-start, flex-start, 30px);
+		@media (max-width: 1024px) {
+			gap: 20px;
+			margin-bottom: 50px;
+		}
+		@media (max-width: 767px) {
+			margin-bottom: 20px;
+		}
+	}
+
+	&__title {
+		font-family: $font-secondary;
+		@include text-style(54px, 500, 70px);
+		text-transform: uppercase;
+		span {
+			display: inline-block;
+			@include box(9px, 9px, 20px);
+			background: $accent;
+		}
+		@media (max-width: 1024px) {
+			@include text-style(48px, 500, 50px);
+		}
+		@media (max-width: 767px) {
+			@include text-style(32px, 500, 36px, center);
+		}
+	}
+
+	&__text {
+		@include text-style(24px, 400, 30px);
+		@media (max-width: 1024px) {
+			@include text-style(20px, 500, 22px);
+		}
+		@media (max-width: 767px) {
+			@include text-style(16px, 500, 18px, center);
+		}
+	}
+
+	&__left-middle {
+		@include flex(row, flex-start, center, 20px);
+		@media (max-width: 1024px) {
+			margin-bottom: 57px;
+		}
+		@media (max-width: 767px) {
+			gap: 10px;
+			margin-bottom: 44px;
+		}
+	}
+
+	&__left-bottom-middle {
+		display: none;
+		@media (max-width: 1024px) {
+			max-width: 308px;
+			width: 100%;
+			@include flex(column, flex-start, flex-start, 13px);
+			margin-bottom: 108px;
+			@media (max-width: 767px) {
+				@include flex(row, flex-start, center, 5px);
+				max-width: 212px;
+				margin-bottom: 0;
+			}
+			img {
+				@media (max-width: 767px) {
+					@include box(40px);
+				}
+			}
+			p {
+				@include text-style(20px, 400, 22px);
+				@media (max-width: 767px) {
+					@include text-style(13px, 400, 16px);
+				}
+			}
+		}
+	}
+
+	&__btn-primary {
+		position: relative;
+		@include center;
+		@include box(291px, 68px);
+		padding: 22px 30px;
+		color: $white;
+		@include text-style(18px, 700, 20px, center);
+		border-radius: 48px;
+		background: linear-gradient(
+			274deg,
+			#ffc420 0%,
+			#fe4b08 39%,
+			#fe4b08 57%,
+			#ffc420 100%
+		);
+		background-size: 200% 200%;
+		background-position: left center;
+		box-shadow: 12px 0 12px 0 rgba(255, 255, 255, 0.25) inset,
+			-2px -4px 8px 0 rgba(255, 255, 255, 0.25) inset;
+		transition: background-position 0.5s ease, box-shadow 0.3s ease;
+
+		&:hover {
+			background-position: center center;
+			box-shadow: 12px 0 12px 0 rgba(255, 255, 255, 0.25) inset,
+				-2px -4px 8px 0 rgba(255, 255, 255, 0.25) inset;
+		}
+		@media (max-width: 767px) {
+			@include box(173px, 51px);
+			padding: 0;
+			@include text-style(12px, 700, 18px);
+		}
+	}
+
+	&__btn-secondary {
+		@include center;
+		@include box(291px, 68px);
+		padding: 22px 30px;
+		@include text-style(18px, 700, 20px, center);
+		border-radius: 40px;
+		border: 2px solid $grey;
+		background: $bg-light;
+		box-shadow: 4px 4px 10px 2px #bcbcbc inset, -4px -4px 10px 2px #fff inset;
+		&:hover {
+			color: $accent;
+			border-radius: 40px;
+			border: 2px solid $accent;
+			background: #ececec;
+			box-shadow: 4px 4px 10px 2px #bcbcbc inset, -4px -4px 10px 2px #fff inset;
+		}
+		@media (max-width: 767px) {
+			@include box(173px, 51px);
+			padding: 0;
+			@include text-style(12px, 700, 18px);
+		}
+	}
+
+	&__left-bottom {
+		@include flex(row, flex-start, flex-start, 50px);
+		@media (max-width: 1024px) {
+			flex-direction: column;
+		}
+		@media (max-width: 767px) {
+			display: none;
+		}
+	}
+
+	&__left-bottom--item {
+		@include flex(column, flex-start, flex-start, 5px);
+		p {
+			@include text-style(40px, 500, 42px);
+		}
+		span {
+			@include text-style(15px, 400, 18px);
+		}
+		@media (max-width: 1024px) {
+			max-width: 203px;
+			width: 100%;
+		}
+	}
+
+	&__right {
+		max-width: 308px;
+		width: 100%;
+		@include flex(column, flex-start, flex-start, 13px);
+		p {
+			@include text-style(24px, 400, 30px);
+		}
+		@media (max-width: 1024px) {
+			display: none;
+		}
+	}
+}
