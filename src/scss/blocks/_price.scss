@@ -1,0 +1,308 @@
+@use '../abstracts' as *;
+
+.price {
+	padding-bottom: 48px;
+	@media (max-width: 1024px) {
+		padding-bottom: 68px;
+	}
+	@media (max-width: 767px) {
+		padding-bottom: 50px;
+	}
+	&__top {
+		max-width: 656px;
+		width: 100%;
+		margin-bottom: 50px;
+		@media (max-width: 1024px) {
+			margin-bottom: 30px;
+		}
+		@media (max-width: 767px) {
+			max-width: 100%;
+			margin-bottom: 20px;
+		}
+	}
+
+	&__top-title {
+		@include text-style(40px, 500, 42px);
+		margin-bottom: 20px;
+		@media (max-width: 1024px) {
+			@include text-style(32px, 500, 34px);
+			margin-bottom: 10px;
+		}
+		@media (max-width: 767px) {
+			@include text-style(24px, 500, 28px);
+		}
+		span {
+			display: inline-block;
+			@include box(9px, 9px, 20px);
+			background: $accent;
+			margin-left: 5px;
+			@media (max-width: 1024px) {
+				@include box(7px, 7px, 20px);
+			}
+			@media (max-width: 767px) {
+				@include box(4px, 4px, 20px);
+			}
+		}
+	}
+
+	&__top-text {
+		color: $grey;
+		@include text-style(16px, 400, 20px);
+		@media (max-width: 767px) {
+			@include text-style(14px, 400, 16px);
+		}
+	}
+
+	&__tabs {
+		@include flex(row, space-between, center, 28px);
+		margin-bottom: 57px;
+		@media (max-width: 1024px) {
+			gap: 5px;
+			margin-bottom: 30px;
+		}
+		@media (max-width: 767px) {
+			@include flex(column, flex-start, flex-start, 10px);
+			margin-bottom: 20px;
+		}
+	}
+
+	&__tab {
+		@include box(297px, 58px, 10px);
+		padding: 4px 10px;
+		@include flex(row, flex-start, center, 10px);
+		background: $bg-light;
+		@include transition;
+		@media (max-width: 1024px) {
+			padding: 8px 16px;
+			@include box(auto, auto, 99px);
+		}
+	}
+
+	&__tab-num {
+		@include center;
+		@include box(50px, 50px, 48px);
+		padding: 15px 13px 15px 12px;
+		flex-shrink: 0;
+		@include text-style(18px, 700, 20px, center);
+		background: $white;
+		@include transition;
+		@media (max-width: 1024px) {
+			display: none;
+		}
+	}
+
+	&__tab-name {
+		width: 100%;
+		@include center;
+		@include text-style(18px, 700, 20px, center);
+		@include transition;
+		@media (max-width: 1024px) {
+			@include text-style(16px, 700, 18px, center);
+		}
+		@media (max-width: 767px) {
+			@include text-style(14px, 700, 16px, center);
+		}
+	}
+
+	&__tab:hover {
+		background: $black;
+		.price__tab-num {
+			color: $accent;
+		}
+		.price__tab-name {
+			color: $white;
+		}
+	}
+
+	&__tab.active {
+		background: $black;
+		.price__tab-num {
+			color: $accent;
+		}
+		.price__tab-name {
+			color: $white;
+		}
+	}
+
+	&__table {
+		@media (max-width: 1024px) {
+			display: none;
+		}
+	}
+
+	&__table-head {
+		padding-bottom: 36px;
+		border-bottom: 1px solid rgba(3, 6, 18, 0.07);
+	}
+
+	&__table-head--row {
+		display: grid;
+		grid-template-columns: repeat(5, 1fr);
+		gap: 20px;
+	}
+
+	&__table-head-name {
+		@include text-style(24px, 500, 30px);
+	}
+
+	&__table-head-tariff {
+		opacity: 0.5;
+		@include text-style(16px, 500, 20px, center);
+	}
+
+	&__table-head-price {
+		@include text-style(18px, 700, 20px, center);
+		margin-bottom: 10px;
+	}
+
+	&__table-head-text {
+		@include text-style(12px, 400, 16px, center);
+	}
+
+	&__table-body {
+	}
+
+	&__table-body--row {
+		display: grid;
+		grid-template-columns: repeat(5, 1fr);
+		gap: 20px;
+		padding: 14px 0 18px 0;
+		border-bottom: 1px solid rgba(3, 6, 18, 0.07);
+	}
+
+	&__table-body--col {
+		@include text-style(14px, 500, 16px);
+		img {
+			margin: auto;
+		}
+	}
+
+	.custom-checkbox {
+		position: relative;
+		@include center;
+		@include box(20px);
+		cursor: pointer;
+		margin: auto;
+		@media (max-width: 1024px) {
+			margin-right: 10px;
+		}
+	}
+
+	.custom-checkbox input {
+		opacity: 0;
+		width: 0;
+		height: 0;
+		position: absolute;
+	}
+
+	.checkmark {
+		position: absolute;
+		top: 0;
+		left: 0;
+		@include box(20px, 20px, 4px);
+		border: 1px solid $accent;
+		@include transition;
+	}
+
+	.custom-checkbox input:checked ~ .checkmark {
+		background-color: $accent;
+	}
+
+	.checkmark::after {
+		content: '';
+		position: absolute;
+		display: none;
+	}
+
+	.custom-checkbox input:checked ~ .checkmark::after {
+		display: block;
+	}
+
+	.custom-checkbox .checkmark::after {
+		left: 6px;
+		top: 3px;
+		@include box(4px, 8px);
+		border: solid $white;
+		border-width: 0 2px 2px 0;
+		transform: rotate(45deg);
+	}
+
+	&__block {
+		display: none;
+		@media (max-width: 1024px) {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			gap: 20px;
+		}
+		@media (max-width: 767px) {
+			grid-template-columns: repeat(1, 1fr);
+		}
+	}
+
+	&__tariff {
+		padding: 20px;
+		border-radius: 20px;
+		border: 1px solid $bg-light;
+		@include transition;
+	}
+
+	&__tariff.custom > ul {
+		gap: 20px;
+	}
+
+	&__tariff-name {
+		@include text-style(16px, 400, 20px);
+		margin-bottom: 5px;
+	}
+
+	&__tariff-price {
+		@include text-style(18px, 700, 20px);
+		margin-bottom: 10px;
+	}
+
+	&__tariff-text {
+		@include text-style(14px, 400, 18px);
+		margin-bottom: 20px;
+	}
+
+	ul {
+		@include flex(column, flex-start, flex-start, 10px);
+	}
+
+	ul > li {
+		@include flex(row, flex-start, flex-start, 5px);
+		@include text-style(14px, 500, 18px);
+		svg {
+			flex-shrink: 0;
+		}
+	}
+
+	&__order-consultation {
+		@include center;
+		color: $white;
+		@include box(291px, 68px, 48px);
+		@include text-style(18px, 700, 20px, center);
+		background: linear-gradient(
+			274deg,
+			#ffc420 0%,
+			#fe4b08 39%,
+			#fe4b08 57%,
+			#ffc420 100%
+		);
+		background-size: 200% 200%; // робимо великий "полотно" градієнта
+		box-shadow: 12px 0 12px 0 rgba(255, 255, 255, 0.25) inset,
+			-2px -4px 8px 0 rgba(255, 255, 255, 0.25) inset;
+		margin: auto;
+		margin-top: 24px;
+		&:hover {
+			background-position: 100% 0; // при ховері зміщуємо градієнт
+		}
+		@media (max-width: 767px) {
+			@include box(343px, 39px, 48px);
+			@include text-style(14px, 700, 16px, center);
+		}
+		@media (max-width: 480px) {
+			width: 100%;
+		}
+	}
+}

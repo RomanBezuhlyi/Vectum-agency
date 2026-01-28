@@ -1,0 +1,138 @@
+@use '../abstracts' as *;
+
+.team {
+	margin-top: 46px;
+	margin-bottom: 100px;
+	@media (max-width: 1024px) {
+		margin-top: 30px;
+		margin-bottom: 80px;
+	}
+	@media (max-width: 1024px) {
+		margin-top: 50px;
+		margin-bottom: 30px;
+	}
+
+	&__top {
+		max-width: 488px;
+		width: 100%;
+		margin-bottom: 50px;
+		@media (max-width: 1024px) {
+			margin-bottom: 30px;
+		}
+		@media (max-width: 767px) {
+			max-width: 100%;
+			margin-bottom: 20px;
+		}
+	}
+
+	&__title {
+		@include text-style(40px, 500, 42px);
+		margin-bottom: 20px;
+		@media (max-width: 1024px) {
+			@include text-style(32px, 500, 34px);
+			margin-bottom: 10px;
+		}
+		@media (max-width: 767px) {
+			@include text-style(24px, 500, 28px);
+		}
+		span {
+			display: inline-block;
+			@include box(9px, 9px, 20px);
+			background: $accent;
+			margin-left: 5px;
+			@media (max-width: 1024px) {
+				@include box(7px, 7px, 20px);
+			}
+			@media (max-width: 767px) {
+				@include box(4px, 4px, 20px);
+			}
+		}
+	}
+
+	&__text {
+		color: $grey;
+		@include text-style(16px, 400, 20px);
+		@media (max-width: 767px) {
+			@include text-style(14px, 400, 16px);
+		}
+	}
+	&__list {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		gap: 24px;
+		@media (max-width: 1024px) {
+			grid-template-columns: repeat(3, 1fr);
+		}
+		@media (max-width: 767px) {
+			display: none;
+		}
+	}
+
+	&__swiper {
+		display: none;
+		@media (max-width: 767px) {
+			display: block;
+		}
+	}
+
+	&__list-item {
+		position: relative;
+		@include flex(column, flex-end, flex-start);
+		@include box(auto, 339px, 10px);
+		padding: 10px;
+		overflow: hidden;
+	}
+
+	&__list-item--img {
+		position: absolute;
+		top: 0;
+		left: 0;
+		@include box(100%);
+		object-fit: cover;
+		object-position: top;
+	}
+
+	&__list-item--info {
+		position: absolute;
+		left: 10px;
+		bottom: 10px;
+		width: calc(100% - 20px);
+		height: 74px;
+		@include flex(row, space-between, center);
+		padding: 16px 10px;
+		border-radius: 5px;
+		background: $white;
+	}
+
+	&__list-item--name {
+		@include flex(column, flex-start, flex-start, 10px);
+		p:first-child {
+			@include text-style(16px, 500, 20px);
+		}
+		p:last-child {
+			@include text-style(15px, 400, 18px);
+		}
+	}
+
+	&__list-item--link {
+		@include center;
+		@include box(32px, 32px, 50px);
+		background: $black;
+		&:hover {
+			background: $accent;
+		}
+	}
+
+	&__nav {
+		margin-top: 50px;
+		@include flex(row, center, center, 20px);
+	}
+
+	&__swiper-prev {
+		@include center;
+	}
+
+	&__swiper-next {
+		@include center;
+	}
+}

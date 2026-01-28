@@ -1,6 +1,6 @@
 @use '../abstracts' as *;
 
-.advantages-wrap {
+.services-wrap {
 	background: url(../img/bg-advantages.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -13,7 +13,7 @@
 		padding: 50px 0;
 	}
 }
-.advantages {
+.services {
 	padding: 50px 30px;
 	border-radius: 40px;
 	background: rgba(146, 146, 146, 0.1);
@@ -36,7 +36,16 @@
 			@include text-style(24px, 500, 28px, center);
 		}
 		span {
-			color: $accent;
+			display: inline-block;
+			@include box(9px, 9px, 20px);
+			background: $accent;
+			margin-left: 5px;
+			@media (max-width: 1024px) {
+				@include box(7px, 7px, 20px);
+			}
+			@media (max-width: 767px) {
+				@include box(4px, 4px, 20px);
+			}
 		}
 	}
 
@@ -94,7 +103,8 @@
 		}
 	}
 
-	&__item-text {
+	&__item-list {
+		@include flex(column, flex-start, flex-start, 10px);
 		color: $grey;
 		@include text-style(16px, 400, 20px);
 		@media (max-width: 1024px) {
@@ -103,5 +113,10 @@
 		@media (max-width: 767px) {
 			@include text-style(11px, 400, 14px);
 		}
+	}
+
+	&__item-list > li {
+		list-style-type: disc;
+		margin-left: 20px;
 	}
 }

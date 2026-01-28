@@ -1,0 +1,72 @@
+@use '../abstracts' as *;
+
+.consultation-wrap {
+	margin-bottom: 100px;
+	@media (max-width: 1024px) {
+		margin-bottom: 50px;
+	}
+}
+.consultation {
+	background: $bg-dark;
+	background-image: url(../img/consultation.png);
+	background-position: right bottom;
+	background-repeat: no-repeat;
+	padding: 50px;
+	border-radius: 20px;
+	@media (max-width: 1024px) {
+		padding: 20px 39px;
+		height: 398px;
+		background-size: 60%;
+	}
+	@media (max-width: 767px) {
+		background-size: 80%;
+	}
+	&__title {
+		max-width: 523px;
+		width: 100%;
+		color: $white;
+		@include text-style(40px, 500, 42px);
+		margin-bottom: 10px;
+		@media (max-width: 767px) {
+			max-width: 100%;
+			@include text-style(24px, 500, 28px, center);
+		}
+	}
+
+	&__text {
+		max-width: 523px;
+		width: 100%;
+		color: $white;
+		@include text-style(16px, 400, 20px);
+		margin-bottom: 39px;
+		@media (max-width: 767px) {
+			max-width: 100%;
+			@include text-style(14px, 400, 16px, center);
+			margin-bottom: 20px;
+		}
+	}
+
+	&__btn {
+		@include center;
+		color: $white;
+		@include box(291px, 68px, 48px);
+		@include text-style(18px, 700, 20px, center);
+		background: linear-gradient(
+			274deg,
+			#ffc420 0%,
+			#fe4b08 39%,
+			#fe4b08 57%,
+			#ffc420 100%
+		);
+		background-size: 200% 200%; // робимо великий "полотно" градієнта
+		box-shadow: 12px 0 12px 0 rgba(255, 255, 255, 0.25) inset,
+			-2px -4px 8px 0 rgba(255, 255, 255, 0.25) inset;
+		&:hover {
+			background-position: 100% 0; // при ховері зміщуємо градієнт
+		}
+		@media (max-width: 767px) {
+			@include box(303px, 49px, 48px);
+			@include text-style(14px, 700, 16px, center);
+		}
+	}
+}

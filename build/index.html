@@ -6,6 +6,11 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="icon" type="image/x-icon" href="./img/favicon.ico" />
 		<title>Vectum agency</title>
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+		/>
+		<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
 		<link rel="stylesheet" href="./css/main.css" />
 	</head>
 
@@ -620,7 +625,9 @@
 <section class="advantages-wrap">
 	<div class="container">
 		<div class="advantages">
-			<h2 class="advantages__title">Чому варто працювати з нами?</h2>
+			<h2 class="advantages__title">
+				Чому варто працювати з нами<span>?</span>
+			</h2>
 			<p class="advantages__text">
 				Ми знаємо, що існує безліч копірайтингових агенцій на вибір — ось чому
 				наші клієнти обирають саме нас
@@ -686,8 +693,995 @@
 	</div>
 </section>
 
+			<section class="clients container">
+	<h2 class="clients__title">Наші клієнти<span>:</span></h2>
+	<div class="clients__swiper swiper">
+		<ul class="clients__list swiper-wrapper">
+			<li class="clients__list-item swiper-slide">
+				<img src="./img/client-1.svg" alt="" />
+			</li>
+			<li class="clients__list-item swiper-slide">
+				<img src="./img/client-2.svg" alt="" />
+			</li>
+			<li class="clients__list-item swiper-slide">
+				<img src="./img/client-3.svg" alt="" />
+			</li>
+			<li class="clients__list-item swiper-slide">
+				<img src="./img/client-4.svg" alt="" />
+			</li>
+			<li class="clients__list-item swiper-slide">
+				<img src="./img/client-5.svg" alt="" />
+			</li>
+			<li class="clients__list-item swiper-slide">
+				<img src="./img/client-1.svg" alt="" />
+			</li>
+			<li class="clients__list-item swiper-slide">
+				<img src="./img/client-2.svg" alt="" />
+			</li>
+			<li class="clients__list-item swiper-slide">
+				<img src="./img/client-3.svg" alt="" />
+			</li>
+			<li class="clients__list-item swiper-slide">
+				<img src="./img/client-4.svg" alt="" />
+			</li>
+			<li class="clients__list-item swiper-slide">
+				<img src="./img/client-5.svg" alt="" />
+			</li>
+		</ul>
+	</div>
+</section>
+<section class="price container">
+	<div class="price__top">
+		<h2 class="price__top-title">Прайс<span></span></h2>
+		<p class="price__top-text">
+			Ми знаємо, що існує безліч копірайтингових агенцій на вибір — ось чому
+			наші клієнти обирають саме нас
+		</p>
+	</div>
+	<div class="price__tabs">
+		<button class="price__tab active">
+			<span class="price__tab-num">01</span>
+			<span class="price__tab-name">SEO просування</span>
+		</button>
+		<button class="price__tab">
+			<span class="price__tab-num">02</span>
+			<span class="price__tab-name">Платна рекалма в Google</span>
+		</button>
+		<button class="price__tab">
+			<span class="price__tab-num">03</span>
+			<span class="price__tab-name">Таргет в соцмережах</span>
+		</button>
+		<button class="price__tab">
+			<span class="price__tab-num">04</span>
+			<span class="price__tab-name">Аналітика</span>
+		</button>
+	</div>
+
+	<div class="price__table">
+		<div class="price__table-head">
+			<div class="price__table-head--row">
+				<div class="price__table-head--col">
+					<p class="price__table-head-name">Тариф</p>
+				</div>
+				<div class="price__table-head--col">
+					<p class="price__table-head-tariff">Basic</p>
+					<p class="price__table-head-price">$100 / month</p>
+					<p class="price__table-head-text">
+						Базові робота для початку органічного просування, оптимізація 5
+						сторінок на місяць і реалзізація бюджету на лінкбілдниг до 500
+						доларів
+					</p>
+				</div>
+				<div class="price__table-head--col">
+					<p class="price__table-head-tariff">Standard</p>
+					<p class="price__table-head-price">$100 / month</p>
+					<p class="price__table-head-text">
+						Пакет для поступового росту вашого органічного трафіку. Оптимізація
+						10 сторінок, реалізація бюджету на лінкбілдинг 1000 доларів.
+					</p>
+				</div>
+				<div class="price__table-head--col">
+					<p class="price__table-head-tariff">Premium</p>
+					<p class="price__table-head-price">$200 / month</p>
+					<p class="price__table-head-text">
+						Стрімкий ріст вашої органічної присутності. Оптимізація 20 сторінок
+						на місяць. Реалізація бюдджету до 2000 доларів на місяць.
+					</p>
+				</div>
+				<div class="price__table-head--col">
+					<p class="price__table-head-tariff">Custom</p>
+					<p class="price__table-head-price" id="custom-price">$0 / month</p>
+					<p class="price__table-head-text">
+						Ви обираєте які напрямки роботи виконувати, яку кількість сторінок
+						оптимізовувати та яку суму бюджету на посилання реалізовуємо, а ми
+						надаємо комерційну пропозицію
+					</p>
+				</div>
+			</div>
+		</div>
+		<div class="price__table-body">
+			<div class="price__table-body--row">
+				<div class="price__table-body--col">SEO аудит</div>
+				<div class="price__table-body--col">
+					<img src="./img/icon-check.svg" alt="" />
+				</div>
+				<div class="price__table-body--col">
+					<img src="./img/icon-check.svg" alt="" />
+				</div>
+				<div class="price__table-body--col">
+					<img src="./img/icon-check.svg" alt="" />
+				</div>
+				<div class="price__table-body--col">
+					<label class="custom-checkbox">
+						<input type="checkbox" class="price-checkbox" data-price="225" />
+						<span class="checkmark"></span>
+					</label>
+				</div>
+			</div>
+			<div class="price__table-body--row">
+				<div class="price__table-body--col">
+					Квартальна стратегія просування
+				</div>
+				<div class="price__table-body--col">
+					<img src="./img/icon-check.svg" alt="" />
+				</div>
+				<div class="price__table-body--col">
+					<img src="./img/icon-check.svg" alt="" />
+				</div>
+				<div class="price__table-body--col">
+					<img src="./img/icon-check.svg" alt="" />
+				</div>
+				<div class="price__table-body--col">
+					<label class="custom-checkbox">
+						<input type="checkbox" class="price-checkbox" data-price="75" />
+						<span class="checkmark"></span>
+					</label>
+				</div>
+			</div>
+			<div class="price__table-body--row">
+				<div class="price__table-body--col">Опимізація сторінок</div>
+				<div class="price__table-body--col"></div>
+				<div class="price__table-body--col">
+					<img src="./img/icon-check.svg" alt="" />
+				</div>
+				<div class="price__table-body--col">
+					<img src="./img/icon-check.svg" alt="" />
+				</div>
+				<div class="price__table-body--col">
+					<label class="custom-checkbox">
+						<input type="checkbox" class="price-checkbox" data-price="100" />
+						<span class="checkmark"></span>
+					</label>
+				</div>
+			</div>
+			<div class="price__table-body--row">
+				<div class="price__table-body--col">Лінкбілдинг</div>
+				<div class="price__table-body--col"></div>
+				<div class="price__table-body--col">
+					<img src="./img/icon-check.svg" alt="" />
+				</div>
+				<div class="price__table-body--col">
+					<img src="./img/icon-check.svg" alt="" />
+				</div>
+				<div class="price__table-body--col">
+					<label class="custom-checkbox">
+						<input type="checkbox" class="price-checkbox" data-price="175" />
+						<span class="checkmark"></span>
+					</label>
+				</div>
+			</div>
+			<div class="price__table-body--row">
+				<div class="price__table-body--col">ТЗ для розробника</div>
+				<div class="price__table-body--col"></div>
+				<div class="price__table-body--col"></div>
+				<div class="price__table-body--col">
+					<img src="./img/icon-check.svg" alt="" />
+				</div>
+				<div class="price__table-body--col">
+					<label class="custom-checkbox">
+						<input type="checkbox" class="price-checkbox" data-price="25" />
+						<span class="checkmark"></span>
+					</label>
+				</div>
+			</div>
+			<div class="price__table-body--row">
+				<div class="price__table-body--col">
+					Дообрацювання дизайну сайту для покращення UI/UX
+				</div>
+				<div class="price__table-body--col"></div>
+				<div class="price__table-body--col"></div>
+				<div class="price__table-body--col">
+					<img src="./img/icon-check.svg" alt="" />
+				</div>
+				<div class="price__table-body--col">
+					<label class="custom-checkbox">
+						<input type="checkbox" class="price-checkbox" data-price="99" />
+						<span class="checkmark"></span>
+					</label>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="price__block">
+		<div class="price__tariff">
+			<p class="price__tariff-name">Basic</p>
+			<p class="price__tariff-price">$100 / month</p>
+			<p class="price__tariff-text">
+				Базові робота для початку органічного просування, оптимізація 5 сторінок
+				на місяць і реалзізація бюджету на лінкбілдниг до 500 доларів
+			</p>
+			<ul>
+				<li>
+					<img src="./img/icon-check.svg" alt="" />
+					SEO аудит
+				</li>
+				<li>
+					<img src="./img/icon-check.svg" alt="" />
+					Квартальна стратегія просування
+				</li>
+			</ul>
+		</div>
+		<div class="price__tariff">
+			<p class="price__tariff-name">Standart</p>
+			<p class="price__tariff-price">$100 / month</p>
+			<p class="price__tariff-text">
+				Пакет для поступового росту вашого органічного трафіку. Оптимізація 10
+				сторінок, реалізація бюджету на лінкбілдинг 1000 доларів.
+			</p>
+			<ul>
+				<li>
+					<img src="./img/icon-check.svg" alt="" />
+					SEO аудит
+				</li>
+				<li>
+					<img src="./img/icon-check.svg" alt="" />
+					Квартальна стратегія просування
+				</li>
+				<li>
+					<img src="./img/icon-check.svg" alt="" />
+					Опимізація сторінок
+				</li>
+				<li>
+					<img src="./img/icon-check.svg" alt="" />
+					Лінкбілдинг
+				</li>
+			</ul>
+		</div>
+		<div class="price__tariff">
+			<p class="price__tariff-name">Premium</p>
+			<p class="price__tariff-price">$200 / month</p>
+			<p class="price__tariff-text">
+				Стрімкий ріст вашої органічної присутності. Оптимізація 20 сторінок на
+				місяць. Реалізація бюдджету до 2000 доларів на місяць.
+			</p>
+			<ul>
+				<li>
+					<img src="./img/icon-check.svg" alt="" />
+					SEO аудит
+				</li>
+				<li>
+					<img src="./img/icon-check.svg" alt="" />
+					Квартальна стратегія просування
+				</li>
+				<li>
+					<img src="./img/icon-check.svg" alt="" />
+					Опимізація сторінок
+				</li>
+				<li>
+					<img src="./img/icon-check.svg" alt="" />
+					Лінкбілдинг
+				</li>
+				<li>
+					<img src="./img/icon-check.svg" alt="" />
+					SEO аудит
+				</li>
+				<li>
+					<img src="./img/icon-check.svg" alt="" />
+					Квартальна стратегія просування
+				</li>
+				<li>
+					<img src="./img/icon-check.svg" alt="" />
+					ТЗ для розробника
+				</li>
+				<li>
+					<img src="./img/icon-check.svg" alt="" />
+					Дообрацювання дизайну сайту для покращення UI/UX
+				</li>
+			</ul>
+		</div>
+		<div class="price__tariff custom">
+			<p class="price__tariff-name">Custom</p>
+			<p class="price__tariff-price" id="custom-price-mobile">$0 / month</p>
+			<p class="price__tariff-text">
+				Ви обираєте які напрямки роботи виконувати, яку кількість сторінок
+				оптимізовувати та яку суму бюджету на посилання реалізовуємо, а ми
+				надаємо комерційну пропозицію
+			</p>
+			<ul>
+				<li>
+					<label class="custom-checkbox">
+						<input type="checkbox" class="price-checkbox" data-price="225" />
+						<span class="checkmark"></span>
+					</label>
+					SEO аудит
+				</li>
+				<li>
+					<label class="custom-checkbox">
+						<input type="checkbox" class="price-checkbox" data-price="225" />
+						<span class="checkmark"></span>
+					</label>
+					Квартальна стратегія просування
+				</li>
+				<li>
+					<label class="custom-checkbox">
+						<input type="checkbox" class="price-checkbox" data-price="225" />
+						<span class="checkmark"></span>
+					</label>
+					Опимізація сторінок
+				</li>
+				<li>
+					<label class="custom-checkbox">
+						<input type="checkbox" class="price-checkbox" data-price="225" />
+						<span class="checkmark"></span>
+					</label>
+					Лінкбілдинг
+				</li>
+				<li>
+					<label class="custom-checkbox">
+						<input type="checkbox" class="price-checkbox" data-price="225" />
+						<span class="checkmark"></span>
+					</label>
+					SEO аудит
+				</li>
+				<li>
+					<label class="custom-checkbox">
+						<input type="checkbox" class="price-checkbox" data-price="225" />
+						<span class="checkmark"></span>
+					</label>
+					Квартальна стратегія просування
+				</li>
+				<li>
+					<label class="custom-checkbox">
+						<input type="checkbox" class="price-checkbox" data-price="225" />
+						<span class="checkmark"></span>
+					</label>
+					ТЗ для розробника
+				</li>
+				<li>
+					<label class="custom-checkbox">
+						<input type="checkbox" class="price-checkbox" data-price="225" />
+						<span class="checkmark"></span>
+					</label>
+					Дообрацювання дизайну сайту для покращення UI/UX
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<button class="price__order-consultation">Замовити консультацію</button>
+</section>
+<section class="planner-wrap">
+	<div class="container">
+		<div class="planner">
+			<div class="planner__left">
+				<h2 class="planner__title">
+					Хочете <span class="planner__title-accent">збільшити продажі</span> за
+					допомогою діджитал маркетингу<span class="planner__title-end">?</span>
+				</h2>
+				<p class="planner__text">
+					Зв’яжіться з нами — підберемо ефективну стратегію саме для вашого
+					бізнесу.
+				</p>
+			</div>
+			<div class="planner__right">
+				<div class="planner__form">
+					<h3 class="planner__form-title">
+						Запланувати обговорення проекту<span></span>
+					</h3>
+					<p class="planner__form-text">
+						Отримайте детальну та зрозумілу комерційну пропозицію
+					</p>
+					<div class="planner__form-tabs">
+						<button class="planner__form-tab">PPS</button>
+						<button class="planner__form-tab">Таргет</button>
+						<button class="planner__form-tab">SMM</button>
+						<button class="planner__form-tab">Influence</button>
+						<button class="planner__form-tab">Tik-Tok</button>
+						<button class="planner__form-tab">Digital marketing</button>
+						<button class="planner__form-tab">Web development</button>
+						<button class="planner__form-tab">Інше</button>
+					</div>
+					<form>
+						<input type="hidden" name="selectedService" id="selected-service" />
+						<div class="row">
+							<input type="text" placeholder="Ваше ім’я" required />
+							<input
+								type="text"
+								placeholder="Номер телефону"
+								data-phone-input
+								required
+							/>
+						</div>
+						<div class="row">
+							<input type="email" placeholder="Ваш E-mail" />
+							<input type="text" placeholder="Посилання на сайт" />
+						</div>
+						<textarea placeholder="Коментар"></textarea>
+						<label class="custom-checkbox form-checkbox">
+							<input type="checkbox" class="consent-checkbox" required />
+							<span class="checkmark"></span>
+							<span class="checkbox-text">
+								Надсилаючи повідомлення, я підтверджую, що ознайомлений та
+								згоден з <a href="#">політикою конфіденційності</a> даного сайту
+							</span>
+						</label>
+						<button class="" type="submit">Надіслати</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<section class="services-wrap">
+	<div class="container">
+		<div class="services">
+			<h2 class="services__title">
+				Наші послуги цифрового маркетингу<span></span>
+			</h2>
+			<p class="services__text">
+				Цифровий маркетинг, який вам потрібен, незалежно від вашої ніші.
+			</p>
+			<ul class="services__list">
+				<li class="services__item">
+					<img
+						class="services__item-img"
+						src="./img/icon-services-1.svg"
+						alt=""
+					/>
+					<p class="services__item-title">Соціальні мережі</p>
+					<ul class="services__item-list">
+						<li>Реклама у Facebook</li>
+						<li>Реклама в Instagram</li>
+						<li>Реклама в TikTok</li>
+					</ul>
+				</li>
+				<li class="services__item">
+					<img
+						class="services__item-img"
+						src="./img/icon-services-2.svg"
+						alt=""
+					/>
+					<p class="services__item-title">Веброзробка</p>
+					<ul class="services__item-list">
+						<li>Розробка на Shopify</li>
+						<li>Розробка на WordPress</li>
+						<li>Оптимізація коефіцієнта конверсії</li>
+					</ul>
+				</li>
+				<li class="services__item">
+					<img
+						class="services__item-img"
+						src="./img/icon-services-3.svg"
+						alt=""
+					/>
+					<p class="services__item-title">PPC</p>
+					<ul class="services__item-list">
+						<li>Пошукова реклама Google</li>
+						<li>Торгова реклама Google </li>
+						<li>Реклама в Microsoft Bing</li>
+					</ul>
+				</li>
+				<li class="services__item">
+					<img
+						class="services__item-img"
+						src="./img/icon-services-4.svg"
+						alt=""
+					/>
+					<p class="services__item-title">Контент-маркетинг</p>
+					<ul class="services__item-list">
+						<li>Управління соціальними мережами</li>
+						<li>Відеоконтент</li>
+						<li>Копірайтинг</li>
+						<li>Брендинг та дизайн логотипів</li>
+					</ul>
+				</li>
+				<li class="services__item">
+					<img
+						class="services__item-img"
+						src="./img/icon-services-5.svg"
+						alt=""
+					/>
+					<p class="services__item-title">Email-маркетинг</p>
+					<ul class="services__item-list">
+						<li>Email-маркетинг</li>
+						<li>Email-маркетинг у Klaviyo</li>
+					</ul>
+				</li>
+				<li class="services__item">
+					<img
+						class="services__item-img"
+						src="./img/icon-services-6.svg"
+						alt=""
+					/>
+					<p class="services__item-title">SEO</p>
+					<ul class="services__item-list">
+						<li>Органічне SEO</li>
+						<li>SEO для інтернет-магазинів </li>
+						<li>Цифровий PR</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</div>
+</section>
+<section class="team container">
+	<div class="team__top">
+		<h2 class="team__title">Наша команда<span></span></h2>
+		<p class="team__text">
+			Ми працюємо як єдине ціле, уважно ставимося до кожного проєкту та завжди
+			орієнтуємося на результат і потреби клієнта.
+		</p>
+	</div>
+	<ul class="team__list">
+		<li class="team__list-item">
+			<img class="team__list-item--img" src="./img/team-1.png" alt="" />
+			<div class="team__list-item--info">
+				<div class="team__list-item--name">
+					<p>Олександр Коваль</p>
+					<p>CEO / Founder</p>
+				</div>
+				<a class="team__list-item--link" href="#">
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						width="17"
+						height="17"
+						viewBox="0 0 17 17"
+						fill="none"
+					>
+						<path
+							d="M3.84082 16.1465H0.214844V5.25195H3.84082V16.1465ZM12.7422 4.99609C15.1281 4.99614 16.9168 6.55342 16.917 9.89941V16.1465H13.291V10.3174C13.2909 8.85378 12.7663 7.85471 11.4541 7.85449C10.4524 7.85449 9.85483 8.52823 9.59277 9.17871C9.49693 9.41182 9.47363 9.73695 9.47363 10.0625V16.1465H5.84766C5.84789 16.0982 5.89533 6.27172 5.84766 5.25195H9.47363V6.79492C9.95491 6.05313 10.8172 4.99609 12.7422 4.99609ZM2.05176 0C3.29193 0.000176294 4.05557 0.813755 4.0791 1.88184C4.07908 2.92789 3.29164 3.76465 2.02734 3.76465H2.00391C0.786822 3.76447 1.87831e-05 2.92778 0 1.88184C0 0.81364 0.811343 0 2.05176 0Z"
+							fill="white"
+						/>
+					</svg>
+				</a>
+			</div>
+		</li>
+		<li class="team__list-item">
+			<img class="team__list-item--img" src="./img/team-2.png" alt="" />
+			<div class="team__list-item--info">
+				<div class="team__list-item--name">
+					<p>Анна Мельник</p>
+					<p>CEO / Founder</p>
+				</div>
+				<a class="team__list-item--link" href="#">
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						width="17"
+						height="17"
+						viewBox="0 0 17 17"
+						fill="none"
+					>
+						<path
+							d="M3.84082 16.1465H0.214844V5.25195H3.84082V16.1465ZM12.7422 4.99609C15.1281 4.99614 16.9168 6.55342 16.917 9.89941V16.1465H13.291V10.3174C13.2909 8.85378 12.7663 7.85471 11.4541 7.85449C10.4524 7.85449 9.85483 8.52823 9.59277 9.17871C9.49693 9.41182 9.47363 9.73695 9.47363 10.0625V16.1465H5.84766C5.84789 16.0982 5.89533 6.27172 5.84766 5.25195H9.47363V6.79492C9.95491 6.05313 10.8172 4.99609 12.7422 4.99609ZM2.05176 0C3.29193 0.000176294 4.05557 0.813755 4.0791 1.88184C4.07908 2.92789 3.29164 3.76465 2.02734 3.76465H2.00391C0.786822 3.76447 1.87831e-05 2.92778 0 1.88184C0 0.81364 0.811343 0 2.05176 0Z"
+							fill="white"
+						/>
+					</svg>
+				</a>
+			</div>
+		</li>
+		<li class="team__list-item">
+			<img class="team__list-item--img" src="./img/team-3.png" alt="" />
+			<div class="team__list-item--info">
+				<div class="team__list-item--name">
+					<p>Олександр Коваль</p>
+					<p>CEO / Founder</p>
+				</div>
+				<a class="team__list-item--link" href="#">
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						width="17"
+						height="17"
+						viewBox="0 0 17 17"
+						fill="none"
+					>
+						<path
+							d="M3.84082 16.1465H0.214844V5.25195H3.84082V16.1465ZM12.7422 4.99609C15.1281 4.99614 16.9168 6.55342 16.917 9.89941V16.1465H13.291V10.3174C13.2909 8.85378 12.7663 7.85471 11.4541 7.85449C10.4524 7.85449 9.85483 8.52823 9.59277 9.17871C9.49693 9.41182 9.47363 9.73695 9.47363 10.0625V16.1465H5.84766C5.84789 16.0982 5.89533 6.27172 5.84766 5.25195H9.47363V6.79492C9.95491 6.05313 10.8172 4.99609 12.7422 4.99609ZM2.05176 0C3.29193 0.000176294 4.05557 0.813755 4.0791 1.88184C4.07908 2.92789 3.29164 3.76465 2.02734 3.76465H2.00391C0.786822 3.76447 1.87831e-05 2.92778 0 1.88184C0 0.81364 0.811343 0 2.05176 0Z"
+							fill="white"
+						/>
+					</svg>
+				</a>
+			</div>
+		</li>
+		<li class="team__list-item">
+			<img class="team__list-item--img" src="./img/team-4.png" alt="" />
+			<div class="team__list-item--info">
+				<div class="team__list-item--name">
+					<p>Олександр Коваль</p>
+					<p>CEO / Founder</p>
+				</div>
+				<a class="team__list-item--link" href="#">
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						width="17"
+						height="17"
+						viewBox="0 0 17 17"
+						fill="none"
+					>
+						<path
+							d="M3.84082 16.1465H0.214844V5.25195H3.84082V16.1465ZM12.7422 4.99609C15.1281 4.99614 16.9168 6.55342 16.917 9.89941V16.1465H13.291V10.3174C13.2909 8.85378 12.7663 7.85471 11.4541 7.85449C10.4524 7.85449 9.85483 8.52823 9.59277 9.17871C9.49693 9.41182 9.47363 9.73695 9.47363 10.0625V16.1465H5.84766C5.84789 16.0982 5.89533 6.27172 5.84766 5.25195H9.47363V6.79492C9.95491 6.05313 10.8172 4.99609 12.7422 4.99609ZM2.05176 0C3.29193 0.000176294 4.05557 0.813755 4.0791 1.88184C4.07908 2.92789 3.29164 3.76465 2.02734 3.76465H2.00391C0.786822 3.76447 1.87831e-05 2.92778 0 1.88184C0 0.81364 0.811343 0 2.05176 0Z"
+							fill="white"
+						/>
+					</svg>
+				</a>
+			</div>
+		</li>
+		<li class="team__list-item">
+			<img class="team__list-item--img" src="./img/team-5.png" alt="" />
+			<div class="team__list-item--info">
+				<div class="team__list-item--name">
+					<p>Олександр Коваль</p>
+					<p>CEO / Founder</p>
+				</div>
+				<a class="team__list-item--link" href="#">
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						width="17"
+						height="17"
+						viewBox="0 0 17 17"
+						fill="none"
+					>
+						<path
+							d="M3.84082 16.1465H0.214844V5.25195H3.84082V16.1465ZM12.7422 4.99609C15.1281 4.99614 16.9168 6.55342 16.917 9.89941V16.1465H13.291V10.3174C13.2909 8.85378 12.7663 7.85471 11.4541 7.85449C10.4524 7.85449 9.85483 8.52823 9.59277 9.17871C9.49693 9.41182 9.47363 9.73695 9.47363 10.0625V16.1465H5.84766C5.84789 16.0982 5.89533 6.27172 5.84766 5.25195H9.47363V6.79492C9.95491 6.05313 10.8172 4.99609 12.7422 4.99609ZM2.05176 0C3.29193 0.000176294 4.05557 0.813755 4.0791 1.88184C4.07908 2.92789 3.29164 3.76465 2.02734 3.76465H2.00391C0.786822 3.76447 1.87831e-05 2.92778 0 1.88184C0 0.81364 0.811343 0 2.05176 0Z"
+							fill="white"
+						/>
+					</svg>
+				</a>
+			</div>
+		</li>
+		<li class="team__list-item">
+			<img class="team__list-item--img" src="./img/team-6.png" alt="" />
+			<div class="team__list-item--info">
+				<div class="team__list-item--name">
+					<p>Олександр Коваль</p>
+					<p>CEO / Founder</p>
+				</div>
+				<a class="team__list-item--link" href="#">
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						width="17"
+						height="17"
+						viewBox="0 0 17 17"
+						fill="none"
+					>
+						<path
+							d="M3.84082 16.1465H0.214844V5.25195H3.84082V16.1465ZM12.7422 4.99609C15.1281 4.99614 16.9168 6.55342 16.917 9.89941V16.1465H13.291V10.3174C13.2909 8.85378 12.7663 7.85471 11.4541 7.85449C10.4524 7.85449 9.85483 8.52823 9.59277 9.17871C9.49693 9.41182 9.47363 9.73695 9.47363 10.0625V16.1465H5.84766C5.84789 16.0982 5.89533 6.27172 5.84766 5.25195H9.47363V6.79492C9.95491 6.05313 10.8172 4.99609 12.7422 4.99609ZM2.05176 0C3.29193 0.000176294 4.05557 0.813755 4.0791 1.88184C4.07908 2.92789 3.29164 3.76465 2.02734 3.76465H2.00391C0.786822 3.76447 1.87831e-05 2.92778 0 1.88184C0 0.81364 0.811343 0 2.05176 0Z"
+							fill="white"
+						/>
+					</svg>
+				</a>
+			</div>
+		</li>
+		<li class="team__list-item">
+			<img class="team__list-item--img" src="./img/team-7.png" alt="" />
+			<div class="team__list-item--info">
+				<div class="team__list-item--name">
+					<p>Олександр Коваль</p>
+					<p>CEO / Founder</p>
+				</div>
+				<a class="team__list-item--link" href="#">
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						width="17"
+						height="17"
+						viewBox="0 0 17 17"
+						fill="none"
+					>
+						<path
+							d="M3.84082 16.1465H0.214844V5.25195H3.84082V16.1465ZM12.7422 4.99609C15.1281 4.99614 16.9168 6.55342 16.917 9.89941V16.1465H13.291V10.3174C13.2909 8.85378 12.7663 7.85471 11.4541 7.85449C10.4524 7.85449 9.85483 8.52823 9.59277 9.17871C9.49693 9.41182 9.47363 9.73695 9.47363 10.0625V16.1465H5.84766C5.84789 16.0982 5.89533 6.27172 5.84766 5.25195H9.47363V6.79492C9.95491 6.05313 10.8172 4.99609 12.7422 4.99609ZM2.05176 0C3.29193 0.000176294 4.05557 0.813755 4.0791 1.88184C4.07908 2.92789 3.29164 3.76465 2.02734 3.76465H2.00391C0.786822 3.76447 1.87831e-05 2.92778 0 1.88184C0 0.81364 0.811343 0 2.05176 0Z"
+							fill="white"
+						/>
+					</svg>
+				</a>
+			</div>
+		</li>
+		<li class="team__list-item">
+			<img class="team__list-item--img" src="./img/team-8.png" alt="" />
+			<div class="team__list-item--info">
+				<div class="team__list-item--name">
+					<p>Олександр Коваль</p>
+					<p>CEO / Founder</p>
+				</div>
+				<a class="team__list-item--link" href="#">
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						width="17"
+						height="17"
+						viewBox="0 0 17 17"
+						fill="none"
+					>
+						<path
+							d="M3.84082 16.1465H0.214844V5.25195H3.84082V16.1465ZM12.7422 4.99609C15.1281 4.99614 16.9168 6.55342 16.917 9.89941V16.1465H13.291V10.3174C13.2909 8.85378 12.7663 7.85471 11.4541 7.85449C10.4524 7.85449 9.85483 8.52823 9.59277 9.17871C9.49693 9.41182 9.47363 9.73695 9.47363 10.0625V16.1465H5.84766C5.84789 16.0982 5.89533 6.27172 5.84766 5.25195H9.47363V6.79492C9.95491 6.05313 10.8172 4.99609 12.7422 4.99609ZM2.05176 0C3.29193 0.000176294 4.05557 0.813755 4.0791 1.88184C4.07908 2.92789 3.29164 3.76465 2.02734 3.76465H2.00391C0.786822 3.76447 1.87831e-05 2.92778 0 1.88184C0 0.81364 0.811343 0 2.05176 0Z"
+							fill="white"
+						/>
+					</svg>
+				</a>
+			</div>
+		</li>
+	</ul>
+	<div class="team__swiper swiper">
+		<ul class="swiper-wrapper">
+			<li class="team__list-item swiper-slide">
+				<img class="team__list-item--img" src="./img/team-1.png" alt="" />
+				<div class="team__list-item--info">
+					<div class="team__list-item--name">
+						<p>Олександр Коваль</p>
+						<p>CEO / Founder</p>
+					</div>
+					<a class="team__list-item--link" href="#">
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							width="17"
+							height="17"
+							viewBox="0 0 17 17"
+							fill="none"
+						>
+							<path
+								d="M3.84082 16.1465H0.214844V5.25195H3.84082V16.1465ZM12.7422 4.99609C15.1281 4.99614 16.9168 6.55342 16.917 9.89941V16.1465H13.291V10.3174C13.2909 8.85378 12.7663 7.85471 11.4541 7.85449C10.4524 7.85449 9.85483 8.52823 9.59277 9.17871C9.49693 9.41182 9.47363 9.73695 9.47363 10.0625V16.1465H5.84766C5.84789 16.0982 5.89533 6.27172 5.84766 5.25195H9.47363V6.79492C9.95491 6.05313 10.8172 4.99609 12.7422 4.99609ZM2.05176 0C3.29193 0.000176294 4.05557 0.813755 4.0791 1.88184C4.07908 2.92789 3.29164 3.76465 2.02734 3.76465H2.00391C0.786822 3.76447 1.87831e-05 2.92778 0 1.88184C0 0.81364 0.811343 0 2.05176 0Z"
+								fill="white"
+							/>
+						</svg>
+					</a>
+				</div>
+			</li>
+			<li class="team__list-item swiper-slide">
+				<img class="team__list-item--img" src="./img/team-2.png" alt="" />
+				<div class="team__list-item--info">
+					<div class="team__list-item--name">
+						<p>Анна Мельник</p>
+						<p>CEO / Founder</p>
+					</div>
+					<a class="team__list-item--link" href="#">
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							width="17"
+							height="17"
+							viewBox="0 0 17 17"
+							fill="none"
+						>
+							<path
+								d="M3.84082 16.1465H0.214844V5.25195H3.84082V16.1465ZM12.7422 4.99609C15.1281 4.99614 16.9168 6.55342 16.917 9.89941V16.1465H13.291V10.3174C13.2909 8.85378 12.7663 7.85471 11.4541 7.85449C10.4524 7.85449 9.85483 8.52823 9.59277 9.17871C9.49693 9.41182 9.47363 9.73695 9.47363 10.0625V16.1465H5.84766C5.84789 16.0982 5.89533 6.27172 5.84766 5.25195H9.47363V6.79492C9.95491 6.05313 10.8172 4.99609 12.7422 4.99609ZM2.05176 0C3.29193 0.000176294 4.05557 0.813755 4.0791 1.88184C4.07908 2.92789 3.29164 3.76465 2.02734 3.76465H2.00391C0.786822 3.76447 1.87831e-05 2.92778 0 1.88184C0 0.81364 0.811343 0 2.05176 0Z"
+								fill="white"
+							/>
+						</svg>
+					</a>
+				</div>
+			</li>
+			<li class="team__list-item swiper-slide">
+				<img class="team__list-item--img" src="./img/team-3.png" alt="" />
+				<div class="team__list-item--info">
+					<div class="team__list-item--name">
+						<p>Олександр Коваль</p>
+						<p>CEO / Founder</p>
+					</div>
+					<a class="team__list-item--link" href="#">
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							width="17"
+							height="17"
+							viewBox="0 0 17 17"
+							fill="none"
+						>
+							<path
+								d="M3.84082 16.1465H0.214844V5.25195H3.84082V16.1465ZM12.7422 4.99609C15.1281 4.99614 16.9168 6.55342 16.917 9.89941V16.1465H13.291V10.3174C13.2909 8.85378 12.7663 7.85471 11.4541 7.85449C10.4524 7.85449 9.85483 8.52823 9.59277 9.17871C9.49693 9.41182 9.47363 9.73695 9.47363 10.0625V16.1465H5.84766C5.84789 16.0982 5.89533 6.27172 5.84766 5.25195H9.47363V6.79492C9.95491 6.05313 10.8172 4.99609 12.7422 4.99609ZM2.05176 0C3.29193 0.000176294 4.05557 0.813755 4.0791 1.88184C4.07908 2.92789 3.29164 3.76465 2.02734 3.76465H2.00391C0.786822 3.76447 1.87831e-05 2.92778 0 1.88184C0 0.81364 0.811343 0 2.05176 0Z"
+								fill="white"
+							/>
+						</svg>
+					</a>
+				</div>
+			</li>
+			<li class="team__list-item swiper-slide">
+				<img class="team__list-item--img" src="./img/team-4.png" alt="" />
+				<div class="team__list-item--info">
+					<div class="team__list-item--name">
+						<p>Олександр Коваль</p>
+						<p>CEO / Founder</p>
+					</div>
+					<a class="team__list-item--link" href="#">
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							width="17"
+							height="17"
+							viewBox="0 0 17 17"
+							fill="none"
+						>
+							<path
+								d="M3.84082 16.1465H0.214844V5.25195H3.84082V16.1465ZM12.7422 4.99609C15.1281 4.99614 16.9168 6.55342 16.917 9.89941V16.1465H13.291V10.3174C13.2909 8.85378 12.7663 7.85471 11.4541 7.85449C10.4524 7.85449 9.85483 8.52823 9.59277 9.17871C9.49693 9.41182 9.47363 9.73695 9.47363 10.0625V16.1465H5.84766C5.84789 16.0982 5.89533 6.27172 5.84766 5.25195H9.47363V6.79492C9.95491 6.05313 10.8172 4.99609 12.7422 4.99609ZM2.05176 0C3.29193 0.000176294 4.05557 0.813755 4.0791 1.88184C4.07908 2.92789 3.29164 3.76465 2.02734 3.76465H2.00391C0.786822 3.76447 1.87831e-05 2.92778 0 1.88184C0 0.81364 0.811343 0 2.05176 0Z"
+								fill="white"
+							/>
+						</svg>
+					</a>
+				</div>
+			</li>
+			<li class="team__list-item swiper-slide">
+				<img class="team__list-item--img" src="./img/team-5.png" alt="" />
+				<div class="team__list-item--info">
+					<div class="team__list-item--name">
+						<p>Олександр Коваль</p>
+						<p>CEO / Founder</p>
+					</div>
+					<a class="team__list-item--link" href="#">
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							width="17"
+							height="17"
+							viewBox="0 0 17 17"
+							fill="none"
+						>
+							<path
+								d="M3.84082 16.1465H0.214844V5.25195H3.84082V16.1465ZM12.7422 4.99609C15.1281 4.99614 16.9168 6.55342 16.917 9.89941V16.1465H13.291V10.3174C13.2909 8.85378 12.7663 7.85471 11.4541 7.85449C10.4524 7.85449 9.85483 8.52823 9.59277 9.17871C9.49693 9.41182 9.47363 9.73695 9.47363 10.0625V16.1465H5.84766C5.84789 16.0982 5.89533 6.27172 5.84766 5.25195H9.47363V6.79492C9.95491 6.05313 10.8172 4.99609 12.7422 4.99609ZM2.05176 0C3.29193 0.000176294 4.05557 0.813755 4.0791 1.88184C4.07908 2.92789 3.29164 3.76465 2.02734 3.76465H2.00391C0.786822 3.76447 1.87831e-05 2.92778 0 1.88184C0 0.81364 0.811343 0 2.05176 0Z"
+								fill="white"
+							/>
+						</svg>
+					</a>
+				</div>
+			</li>
+			<li class="team__list-item swiper-slide">
+				<img class="team__list-item--img" src="./img/team-6.png" alt="" />
+				<div class="team__list-item--info">
+					<div class="team__list-item--name">
+						<p>Олександр Коваль</p>
+						<p>CEO / Founder</p>
+					</div>
+					<a class="team__list-item--link" href="#">
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							width="17"
+							height="17"
+							viewBox="0 0 17 17"
+							fill="none"
+						>
+							<path
+								d="M3.84082 16.1465H0.214844V5.25195H3.84082V16.1465ZM12.7422 4.99609C15.1281 4.99614 16.9168 6.55342 16.917 9.89941V16.1465H13.291V10.3174C13.2909 8.85378 12.7663 7.85471 11.4541 7.85449C10.4524 7.85449 9.85483 8.52823 9.59277 9.17871C9.49693 9.41182 9.47363 9.73695 9.47363 10.0625V16.1465H5.84766C5.84789 16.0982 5.89533 6.27172 5.84766 5.25195H9.47363V6.79492C9.95491 6.05313 10.8172 4.99609 12.7422 4.99609ZM2.05176 0C3.29193 0.000176294 4.05557 0.813755 4.0791 1.88184C4.07908 2.92789 3.29164 3.76465 2.02734 3.76465H2.00391C0.786822 3.76447 1.87831e-05 2.92778 0 1.88184C0 0.81364 0.811343 0 2.05176 0Z"
+								fill="white"
+							/>
+						</svg>
+					</a>
+				</div>
+			</li>
+			<li class="team__list-item swiper-slide">
+				<img class="team__list-item--img" src="./img/team-7.png" alt="" />
+				<div class="team__list-item--info">
+					<div class="team__list-item--name">
+						<p>Олександр Коваль</p>
+						<p>CEO / Founder</p>
+					</div>
+					<a class="team__list-item--link" href="#">
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							width="17"
+							height="17"
+							viewBox="0 0 17 17"
+							fill="none"
+						>
+							<path
+								d="M3.84082 16.1465H0.214844V5.25195H3.84082V16.1465ZM12.7422 4.99609C15.1281 4.99614 16.9168 6.55342 16.917 9.89941V16.1465H13.291V10.3174C13.2909 8.85378 12.7663 7.85471 11.4541 7.85449C10.4524 7.85449 9.85483 8.52823 9.59277 9.17871C9.49693 9.41182 9.47363 9.73695 9.47363 10.0625V16.1465H5.84766C5.84789 16.0982 5.89533 6.27172 5.84766 5.25195H9.47363V6.79492C9.95491 6.05313 10.8172 4.99609 12.7422 4.99609ZM2.05176 0C3.29193 0.000176294 4.05557 0.813755 4.0791 1.88184C4.07908 2.92789 3.29164 3.76465 2.02734 3.76465H2.00391C0.786822 3.76447 1.87831e-05 2.92778 0 1.88184C0 0.81364 0.811343 0 2.05176 0Z"
+								fill="white"
+							/>
+						</svg>
+					</a>
+				</div>
+			</li>
+			<li class="team__list-item swiper-slide">
+				<img class="team__list-item--img" src="./img/team-8.png" alt="" />
+				<div class="team__list-item--info">
+					<div class="team__list-item--name">
+						<p>Олександр Коваль</p>
+						<p>CEO / Founder</p>
+					</div>
+					<a class="team__list-item--link" href="#">
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							width="17"
+							height="17"
+							viewBox="0 0 17 17"
+							fill="none"
+						>
+							<path
+								d="M3.84082 16.1465H0.214844V5.25195H3.84082V16.1465ZM12.7422 4.99609C15.1281 4.99614 16.9168 6.55342 16.917 9.89941V16.1465H13.291V10.3174C13.2909 8.85378 12.7663 7.85471 11.4541 7.85449C10.4524 7.85449 9.85483 8.52823 9.59277 9.17871C9.49693 9.41182 9.47363 9.73695 9.47363 10.0625V16.1465H5.84766C5.84789 16.0982 5.89533 6.27172 5.84766 5.25195H9.47363V6.79492C9.95491 6.05313 10.8172 4.99609 12.7422 4.99609ZM2.05176 0C3.29193 0.000176294 4.05557 0.813755 4.0791 1.88184C4.07908 2.92789 3.29164 3.76465 2.02734 3.76465H2.00391C0.786822 3.76447 1.87831e-05 2.92778 0 1.88184C0 0.81364 0.811343 0 2.05176 0Z"
+								fill="white"
+							/>
+						</svg>
+					</a>
+				</div>
+			</li>
+		</ul>
+		<div class="team__nav">
+			<button class="team__swiper-prev">
+				<img src="./img/icon-btn-prev.svg" alt="" />
+			</button>
+			<button class="team__swiper-next">
+				<img src="./img/icon-btn-next.svg" alt="" />
+			</button>
+		</div>
+	</div>
+</section>
+<section class="author container">
+	<h2 class="author__title">
+		Які переваги отримує ваш бізнес з локальним SEO від Vectum Agency
+		<span>?</span>
+	</h2>
+	<div class="author__content">
+		<div class="author__text">
+			<p>
+				Локальний пошук — це перша точка контакту між бізнесом і клієнтом. Коли
+				люди шукають послуги поблизу, рішення приймається миттєво: ще до
+				переходу на сайт. Саме тому правильна локальна SEO-стратегія напряму
+				впливає на кількість звернень, дзвінків і продажів.
+			</p>
+			<p>
+				<strong
+					>Vectum Agency вибудовує локальне SEO не як набір окремих дій, а як
+					цілісну систему залучення клієнтів у конкретному регіоні.
+				</strong>
+			</p>
+			<p><strong>У результаті ви отримуєте:</strong></p>
+			<ul>
+				<li>
+					Присутність у локальній видачі саме тоді, коли клієнт готовий до
+					покупки
+				</li>
+				<li>
+					Стабільний потік релевантного трафіку з Google Maps, локального пошуку
+					та AI-результатів
+				</li>
+				<li>
+					Чітку перевагу над конкурентами з слабкою або неструктурованою
+					онлайн-присутністю
+				</li>
+				<li>
+					Професійно налаштований бізнес-профіль у Google з фокусом на конверсії
+				</li>
+				<li>
+					Підсилення репутації бренду через відгуки, рейтинги та довіру
+					користувачів
+				</li>
+			</ul>
+		</div>
+		<div class="author__block">
+			<p class="author__block-text">
+				Локальне SEO з Vectum Agency — це не разове налаштування, а інвестиція у
+				впізнаваність, довіру та довгостроковий розвиток вашого бізнесу в
+				регіоні. Почніть отримувати більше звернень вже сьогодні.
+			</p>
+			<p class="author__block-title">Вже сьогодні<span>!</span></p>
+		</div>
+	</div>
+	<div class="author__person">
+		<div class="author__person-info">
+			<p class="author__person-name">Олександр Коваль</p>
+			<p class="author__person-position">CEO / Founder</p>
+		</div>
+		<img class="author__person-img" src="./img/author.png" alt="" />
+	</div>
+</section>
+<section class="consultation-wrap">
+	<div class="container">
+		<div class="consultation">
+			<h2 class="consultation__title">Підніміть свій сайт на новий рівень</h2>
+			<p class="consultation__text">
+				Оптимізуємо ваш сайт для пошукових систем, щоб залучати більше клієнтів
+				і підвищувати продажі.
+			</p>
+			<button class="consultation__btn">Замовити консультацію</button>
+		</div>
+	</div>
+</section>
+
 		</main>
 		
+		<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+		<script src="https://unpkg.com/imask"></script>
 		<script src="./js/index.bundle.js"></script>
 	</body>
 </html>

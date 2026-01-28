@@ -1,0 +1,299 @@
+@use '../abstracts' as *;
+
+.planner-wrap {
+	width: 100%;
+	background-image: url(../img/bg-form.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: right;
+	padding: 50px 0;
+	@media (max-width: 1024px) {
+		padding: 40px 0;
+	}
+	@media (max-width: 767px) {
+		padding: 20px 0;
+		background-position: center;
+	}
+}
+.planner {
+	@include flex(row, space-between, center, 74px);
+	@media (max-width: 1024px) {
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 40px;
+	}
+	@media (max-width: 767px) {
+		gap: 20px;
+	}
+	&__left {
+		@include flex(column, center, flex-start);
+		max-width: 611px;
+		width: 100%;
+		@media (max-width: 1024px) {
+			max-width: 523px;
+		}
+		@media (max-width: 767px) {
+			max-width: 100%;
+		}
+	}
+
+	&__title {
+		@include text-style(40px, 500, 50px);
+		text-transform: uppercase;
+		margin-bottom: 20px;
+		@media (max-width: 1024px) {
+			@include text-style(32px, 500, 34px);
+		}
+		@media (max-width: 767px) {
+			@include text-style(24px, 500, 28px);
+			margin-bottom: 10px;
+		}
+		&-accent {
+			position: relative;
+			background: rgba(255, 85, 0, 0.3);
+			border-left: 1px solid $accent;
+			border-right: 1px solid $accent;
+			padding: 0 5px;
+			&::after {
+				content: '';
+				position: absolute;
+				top: -3px;
+				left: -3px;
+				display: block;
+				@include box(6px, 6px, 20px);
+				background: $accent;
+			}
+		}
+		&-end {
+			color: $accent;
+		}
+	}
+
+	&__text {
+		@include text-style(16px, 400, 20px);
+		@media (max-width: 767px) {
+			@include text-style(14px, 400, 18px);
+		}
+	}
+
+	&__right {
+		@include center;
+		@media (max-width: 1024px) {
+			margin: auto;
+		}
+	}
+
+	&__form {
+		width: 582px;
+		padding: 50px 30px;
+		border-radius: 20px;
+		background: $white;
+		box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1) inset;
+		@media (max-width: 1024px) {
+			padding: 30px;
+		}
+		@media (max-width: 767px) {
+			width: 100%;
+			padding: 20px;
+		}
+	}
+
+	&__form-title {
+		@include text-style(40px, 500, 42px);
+		margin-bottom: 10px;
+		@media (max-width: 1024px) {
+			@include text-style(32px, 500, 34px);
+		}
+		@media (max-width: 767px) {
+			@include text-style(24px, 500, 28px);
+		}
+		span {
+			display: inline-block;
+			@include box(9px, 9px, 20px);
+			background: $accent;
+			margin-left: 0;
+			@media (max-width: 1024px) {
+				@include box(7px, 7px, 20px);
+			}
+			@media (max-width: 767px) {
+				@include box(4px, 4px, 20px);
+			}
+		}
+	}
+
+	&__form-text {
+		@include text-style(16px, 400, 20px);
+		margin-bottom: 20px;
+		@media (max-width: 767px) {
+			@include text-style(14px, 400, 16px);
+			margin-bottom: 10px;
+		}
+	}
+
+	&__form-tabs {
+		@include flex(row, flex-start, center, 5px);
+		flex-wrap: wrap;
+		margin-bottom: 20px;
+	}
+
+	&__form-tab {
+		@include center;
+		padding: 10px 20px;
+		@include text-style(18px, 400, 20px);
+		border-radius: 20px;
+		border: 1px solid $grey;
+		background: $white;
+		&:hover {
+			color: $accent;
+			border-color: $accent;
+		}
+		&.active {
+			color: $accent;
+			border-color: $accent;
+		}
+		@media (max-width: 767px) {
+			@include text-style(12px, 400, 14px);
+			padding: 8px 18px;
+		}
+	}
+
+	form {
+		width: 100%;
+		@include flex(column, center, center, 10px);
+		@media (max-width: 767px) {
+			gap: 5px;
+		}
+		.row {
+			width: 100%;
+			@include flex(row, center, center, 10px);
+			@media (max-width: 767px) {
+				flex-direction: column;
+				gap: 5px;
+			}
+		}
+		input {
+			@include flex(row, flex-start, center);
+			@include box(100%, 55px, 25px);
+			padding: 23px 24px;
+			@include text-style(16px, 400, 18px);
+			border: 1px solid $white;
+			background: $bg-light;
+			&::placeholder {
+				color: $grey;
+				opacity: 1;
+			}
+			@media (max-width: 767px) {
+				height: 45px;
+				@include text-style(14px, 400, 16px);
+			}
+		}
+		textarea {
+			@include flex(row, flex-start, center);
+			@include box(100%, 141px, 25px);
+			padding: 23px 24px;
+			@include text-style(16px, 400, 18px);
+			border: 1px solid $white;
+			background: $bg-light;
+			resize: none;
+			@media (max-width: 767px) {
+				height: 119px;
+				@include text-style(14px, 400, 16px);
+			}
+		}
+
+		.form-checkbox {
+			@include flex(row, flex-start, flex-start, 12px);
+			cursor: pointer;
+			margin-top: 10px;
+			margin-bottom: 10px;
+			@media (max-width: 767px) {
+				gap: 10px;
+			}
+
+			input {
+				opacity: 0;
+				width: 0;
+				height: 0;
+				position: absolute;
+			}
+
+			.checkmark {
+				position: relative;
+				@include box(20px, 20px, 5px);
+				flex-shrink: 0;
+				@include transition;
+				border: 1px solid $accent;
+				@media (max-width: 767px) {
+					@include box(18px, 18px, 5px);
+				}
+
+				&::after {
+					content: '';
+					position: absolute;
+					display: none;
+					left: 6px;
+					top: 3px;
+					@include box(4px, 8px);
+					border: solid $white;
+					border-width: 0 2px 2px 0;
+					transform: rotate(45deg);
+					@media (max-width: 767px) {
+						left: 5px;
+						top: 2px;
+					}
+				}
+			}
+
+			input:checked ~ .checkmark {
+				background-color: $accent;
+			}
+
+			input:checked ~ .checkmark::after {
+				display: block;
+			}
+
+			.checkbox-text {
+				flex: 1;
+				@include text-style(14px, 400, 13px);
+				@media (max-width: 767px) {
+					font-size: 13px;
+				}
+				a {
+					text-decoration-line: underline;
+					text-decoration-style: solid;
+					text-decoration-skip-ink: auto;
+					text-decoration-thickness: auto;
+					text-underline-offset: auto;
+				}
+			}
+		}
+
+		button {
+			@include center;
+			color: $white;
+			@include box(100%, 68px, 48px);
+			@include text-style(18px, 700, 20px, center);
+			background: linear-gradient(
+				274deg,
+				#ffc420 0%,
+				#fe4b08 39%,
+				#fe4b08 57%,
+				#ffc420 100%
+			);
+			background-size: 200% 200%; // робимо великий "полотно" градієнта
+			box-shadow: 12px 0 12px 0 rgba(255, 255, 255, 0.25) inset,
+				-2px -4px 8px 0 rgba(255, 255, 255, 0.25) inset;
+			&:hover {
+				background-position: 100% 0; // при ховері зміщуємо градієнт
+			}
+			&:disabled {
+				opacity: 0.5;
+				pointer-events: none;
+			}
+			@media (max-width: 767px) {
+				@include box(100%, 49px, 48px);
+				@include text-style(12px, 700, 18px, center);
+			}
+		}
+	}
+}
