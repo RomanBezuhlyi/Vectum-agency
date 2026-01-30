@@ -1,0 +1,65 @@
+@use '../abstracts' as *;
+
+.newspaper-wrap {
+	margin-bottom: 50px;
+}
+
+.newspaper {
+	@include flex(column, center, center, 50px);
+	padding: 50px 30px;
+	border-radius: 40px;
+	background: $bg-light;
+	@media (max-width: 1024px) {
+		gap: 30px;
+		border-radius: 30px;
+		padding: 30px;
+	}
+	@media (max-width: 767px) {
+		gap: 10px;
+		border-radius: 20px;
+		padding: 20px 10px;
+	}
+
+	&__title {
+		max-width: 656px;
+		width: 100%;
+		@include text-style(40px, 500, 42px, center);
+		@media (max-width: 1024px) {
+			@include text-style(32px, 500, 34px, center);
+		}
+		@media (max-width: 767px) {
+			@include text-style(24px, 500, 28px, center);
+		}
+	}
+
+	&__body {
+		column-count: 3;
+		column-gap: 27px;
+		@media (max-width: 1024px) {
+			column-count: 2;
+			column-gap: 20px;
+		}
+		@media (max-width: 767px) {
+			column-count: 1;
+			column-gap: 0;
+		}
+		h3 {
+			@include text-style(24px, 500, 30px);
+			@media (max-width: 1024px) {
+				@include text-style(20px, 500, 22px);
+			}
+			@media (max-width: 767px) {
+				@include text-style(16px, 500, 18px);
+			}
+		}
+		& > * + * {
+			margin-top: 20px;
+		}
+		p {
+			@include text-style(16px, 400, 20px);
+			@media (max-width: 767px) {
+				@include text-style(14px, 400, 16px);
+			}
+		}
+	}
+}

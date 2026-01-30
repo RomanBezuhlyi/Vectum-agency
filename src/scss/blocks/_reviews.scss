@@ -1,0 +1,152 @@
+@use '../abstracts' as *;
+
+.reviews {
+	margin-bottom: 100px;
+	@media (max-width: 991px) {
+		margin-bottom: 50px;
+	}
+	&__title {
+		@include text-style(40px, 500, 42px);
+		margin-bottom: 50px;
+		@media (max-width: 1024px) {
+			@include text-style(32px, 500, 34px);
+			margin-bottom: 30px;
+		}
+		@media (max-width: 767px) {
+			@include text-style(24px, 500, 28px);
+			margin-bottom: 20px;
+		}
+		span {
+			display: inline-block;
+			@include box(9px, 9px, 20px);
+			background: $accent;
+			margin-left: 5px;
+			@media (max-width: 1024px) {
+				@include box(7px, 7px, 20px);
+			}
+			@media (max-width: 767px) {
+				@include box(4px, 4px, 20px);
+			}
+		}
+	}
+
+	&__swiper {
+		width: 629px;
+		margin-right: 0;
+		margin-bottom: 62px;
+		@media (max-width: 991px) {
+			width: 100%;
+			margin-bottom: 20px;
+		}
+	}
+
+	&__item {
+		@include flex(row, flex-start, flex-start, 20px);
+		@include text-style(20px, 400, 30px);
+		@media (max-width: 767px) {
+			@include text-style(13px, 400, 16px);
+		}
+	}
+
+	&__item-user {
+		display: none;
+		@media (max-width: 991px) {
+			@include flex(row, flex-start, center, 4px);
+			padding: 5px;
+			@include box(fit-content, 45px, 30px);
+			margin-left: auto;
+			margin-top: 5px;
+			background: $bg-light;
+			img {
+				@include box(40px, 40px, 30px);
+				object-fit: cover;
+			}
+		}
+	}
+
+	&__bottom {
+		@include flex(row, flex-end, center, 56px);
+		margin-bottom: 50px;
+		@media (max-width: 991px) {
+			@include flex(column, center, center, 20px);
+			margin-bottom: 20px;
+		}
+	}
+
+	&__users {
+		@include flex(row, flex-end, center, 10px);
+		@media (max-width: 991px) {
+			display: none;
+		}
+	}
+
+	&__user {
+		@include flex(row, flex-start, center, 4px);
+		padding: 5px;
+		max-width: 60px;
+		@include box(100%, 60px, 30px);
+		background: $bg-light;
+		overflow: hidden;
+		transition: all 1s;
+		&.active {
+			max-width: 350px;
+		}
+	}
+
+	&__user-info {
+		@include flex(column, flex-start, flex-start, 7px);
+		padding-right: 20px;
+		img {
+			@include box(50px, 50px, 30px);
+			object-fit: cover;
+		}
+	}
+
+	&__user-name {
+		@include text-style(16px, 500, 20px);
+		white-space: nowrap;
+		@media (max-width: 991px) {
+			@include text-style(13px, 500, 15px);
+		}
+	}
+
+	&__user-company {
+		@include text-style(14px, 400, 13px);
+		white-space: nowrap;
+		@media (max-width: 991px) {
+			@include text-style(12px, 400, 14px);
+		}
+	}
+
+	&__nav {
+		@include flex(row, center, center);
+	}
+
+	&__nav-prev {
+		@include center;
+	}
+
+	&__nav-next {
+		@include center;
+	}
+
+	&__link {
+		@include flex(row, flex-end, center, 10px);
+		@include text-style(32px, 400, normal);
+		text-transform: uppercase;
+		@include transition;
+		@media (max-width: 991px) {
+			@include text-style(20px, 400, 22px);
+		}
+		svg {
+			fill: $black;
+			@include transition;
+		}
+		&:hover {
+			color: $accent;
+			svg {
+				fill: $accent;
+			}
+		}
+	}
+}

@@ -1,0 +1,165 @@
+@use '../abstracts' as *;
+
+.roadmap-wrap {
+	background-image: url(../img/bg-roadmap.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	padding-top: 50px;
+	padding-bottom: 30px;
+	margin-bottom: 50px;
+	@media (max-width: 991px) {
+		padding-top: 20px;
+		padding-bottom: 20px;
+	}
+}
+.roadmap {
+	width: 100%;
+	&__top {
+		max-width: 656px;
+		width: 100%;
+		margin-bottom: 50px;
+		@media (max-width: 1024px) {
+			margin-bottom: 30px;
+		}
+		@media (max-width: 767px) {
+			max-width: 100%;
+			margin-bottom: 20px;
+		}
+	}
+
+	&__title {
+		@include text-style(40px, 500, 42px);
+		margin-bottom: 20px;
+		@media (max-width: 1024px) {
+			@include text-style(32px, 500, 34px);
+			margin-bottom: 10px;
+		}
+		@media (max-width: 767px) {
+			@include text-style(24px, 500, 28px);
+		}
+		span {
+			display: inline-block;
+			@include box(9px, 9px, 20px);
+			background: $accent;
+			margin-left: 5px;
+			@media (max-width: 1024px) {
+				@include box(7px, 7px, 20px);
+			}
+			@media (max-width: 767px) {
+				@include box(4px, 4px, 20px);
+			}
+		}
+	}
+
+	&__text {
+		color: $grey;
+		@include text-style(16px, 400, 20px);
+		@media (max-width: 767px) {
+			@include text-style(14px, 400, 16px);
+		}
+	}
+
+	&__list {
+		position: relative;
+		@include flex(row, space-around, center);
+		width: 100%;
+		overflow: hidden;
+		padding-bottom: 20px;
+		@media (max-width: 991px) {
+			@include flex(column, flex-start, flex-start, 50px);
+			padding-left: 20px;
+		}
+	}
+
+	&__list-bg-element {
+		position: absolute;
+		left: 0;
+		top: 56.5px;
+		z-index: 1;
+		@media (max-width: 991px) {
+			display: none;
+		}
+	}
+
+	&__list-bg-element--mobile {
+		display: none;
+		@media (max-width: 991px) {
+			display: block;
+			position: absolute;
+			left: 0;
+			top: 0;
+			z-index: 1;
+		}
+	}
+
+	&__item {
+		position: relative;
+		@include flex(column, flex-start, flex-start, 20px);
+		z-index: 2;
+	}
+
+	&__item:hover {
+		.roadmap__item-top {
+			span,
+			p {
+				color: $accent;
+			}
+		}
+		.roadmap__item-img {
+			background: $accent;
+			svg {
+				fill: $white;
+			}
+		}
+	}
+
+	&__item-top {
+		@include flex(row, flex-start, flex-end, 5px);
+		span {
+			display: block;
+			@include text-style(40px, 500, normal);
+			@include transition;
+		}
+		p {
+			@include text-style(14px, 500, normal);
+			position: relative;
+			top: -4px;
+			@include transition;
+		}
+	}
+
+	&__item-bottom {
+		@include flex(row, flex-start, flex-end, 10px);
+	}
+
+	&__item-img-wrap {
+		@include flex(column, center, center);
+		.line {
+			@media (max-width: 991px) {
+				display: none;
+			}
+		}
+	}
+
+	&__item-img {
+		@include center;
+		padding: 10px;
+		border-radius: 25px;
+		background: $bg-light;
+		box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.15);
+		@include transition;
+		svg {
+			fill: $black;
+			@include transition;
+		}
+	}
+
+	&__item-list {
+		@include flex(column, flex-end, flex-start, 2px);
+	}
+
+	&__item-item {
+		@include text-style(14px, 400, 20px);
+	}
+}

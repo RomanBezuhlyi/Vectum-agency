@@ -1,9 +1,12 @@
+import { initArticlesSwiper } from './modules/initArticlesSwiper'
 import { initClientsSwiper } from './modules/initClientsSwiper'
+import { initFaqAccordion } from './modules/initFaqAccordion'
 import { initMobileMenu } from './modules/initMobileMenu'
 import { initMobileMenuAccordion } from './modules/initMobileMenuAccordion'
 import { initPhoneMask } from './modules/initPhoneMask'
 import { initPlannerForm } from './modules/initPlannerForm'
 import { initPriceCalculator } from './modules/initPriceCalculator'
+import { initReviewsSwiper } from './modules/initReviewsSwiper'
 import { initShowPhone } from './modules/initShowPhone'
 import { initTeamSwiper } from './modules/initTeamSwiper'
 
@@ -23,4 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	initPhoneMask()
 	initPlannerForm()
 	initTeamSwiper()
+	initReviewsSwiper()
+	initArticlesSwiper()
+	initFaqAccordion()
 })
