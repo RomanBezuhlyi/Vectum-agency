@@ -121,16 +121,11 @@
 			#fe4b08 57%,
 			#ffc420 100%
 		);
-		background-size: 200% 200%;
-		background-position: left center;
+		background-size: 200% 200%; // робимо великий "полотно" градієнта
 		box-shadow: 12px 0 12px 0 rgba(255, 255, 255, 0.25) inset,
 			-2px -4px 8px 0 rgba(255, 255, 255, 0.25) inset;
-		transition: background-position 0.5s ease, box-shadow 0.3s ease;
-
 		&:hover {
-			background-position: center center;
-			box-shadow: 12px 0 12px 0 rgba(255, 255, 255, 0.25) inset,
-				-2px -4px 8px 0 rgba(255, 255, 255, 0.25) inset;
+			background-position: 100% 0; // при ховері зміщуємо градієнт
 		}
 		@media (max-width: 767px) {
 			@include box(173px, 51px);

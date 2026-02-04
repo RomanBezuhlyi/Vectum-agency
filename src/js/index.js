@@ -5,6 +5,7 @@ import { initMobileMenu } from './modules/initMobileMenu'
 import { initMobileMenuAccordion } from './modules/initMobileMenuAccordion'
 import { initPhoneMask } from './modules/initPhoneMask'
 import { initPlannerForm } from './modules/initPlannerForm'
+import { initPopups } from './modules/initPopups'
 import { initPriceCalculator } from './modules/initPriceCalculator'
 import { initReviewsSwiper } from './modules/initReviewsSwiper'
 import { initShowPhone } from './modules/initShowPhone'
@@ -29,4 +30,5 @@ document.addEventListener('DOMContentLoaded', () => {
 	initReviewsSwiper()
 	initArticlesSwiper()
 	initFaqAccordion()
+	initPopups()
 })

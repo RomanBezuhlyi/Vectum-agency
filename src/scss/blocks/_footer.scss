@@ -1,0 +1,173 @@
+@use '../abstracts' as *;
+
+.footer-wrap {
+	padding: 30px 0;
+	background: $bg-dark;
+}
+.footer {
+	&__top {
+		@include flex(row, flex-start, flex-start, 43px);
+		margin-bottom: 40px;
+		@media (max-width: 991px) {
+			flex-direction: column;
+			margin-bottom: 30px;
+		}
+	}
+
+	&__main {
+		@include flex(column, space-between, flex-start);
+	}
+
+	&__main-top {
+		@include flex(column, flex-start, flex-start);
+		margin-bottom: 40px;
+		@media (max-width: 991px) {
+			margin-bottom: 30px;
+		}
+	}
+
+	&__logo {
+		@include center;
+		margin-bottom: 20px;
+	}
+
+	&__text {
+		color: $accent;
+		@include text-style(18px, 700, 20px);
+		margin-bottom: 10px;
+	}
+
+	&__form-label {
+		display: block;
+		max-width: 349px;
+		width: 100%;
+		color: $white;
+		@include text-style(15px, 400, 18px);
+		margin-bottom: 15px;
+	}
+
+	&__form-input {
+		position: relative;
+		@include box(326px, 48px);
+		overflow: hidden;
+		input {
+			@include box(100%);
+			padding: 10px 50px 10px 16px;
+			@include text-style(15px, 400, 18px);
+			border-radius: 56px;
+			border: 1px solid #d1d5db;
+			background: $white;
+		}
+		input::placeholder {
+			color: #4b5563;
+			opacity: 1;
+		}
+		button {
+			@include center;
+			position: absolute;
+			top: 50%;
+			right: 10px;
+			transform: translateY(-50%);
+		}
+	}
+
+	&__main-bottom {
+		@include flex(column, flex-start, flex-start, 10px);
+	}
+
+	&__main-bottom--contact {
+		color: $white;
+		@include text-style(16px, 400, 20px);
+		a {
+			@include text-style(14px, 500, 20px);
+			&:hover {
+				color: $accent;
+			}
+		}
+	}
+
+	&__nav {
+		width: 100%;
+		@include flex(row, space-between, flex-start, 20px);
+		@media (max-width: 991px) {
+			display: none;
+		}
+	}
+
+	&__nav-col {
+		max-width: 205px;
+		width: 100%;
+		@include flex(column, flex-start, flex-start, 20px);
+	}
+
+	&__nav-col--title {
+		color: $white;
+		@include text-style(20px, 500, 20px);
+	}
+
+	&__nav-col--list {
+		width: 100%;
+		@include flex(column, flex-start, flex-start, 10px);
+	}
+
+	&__nav-col--item {
+		width: 100%;
+		color: $white;
+		@include text-style(16px, 400, 20px);
+		&:hover {
+			color: $accent;
+		}
+	}
+
+	&__bottom {
+		@include flex(row, space-between, center, 20px);
+	}
+
+	&__bottom-list {
+		@include flex(row, flex-start, flex-start, 50px);
+		@media (max-width: 991px) {
+			flex-direction: column-reverse;
+			gap: 10px;
+		}
+	}
+
+	&__bottom-item {
+		color: $white;
+		@include text-style(16px, 400, 20px);
+		&:first-child {
+			@media (max-width: 991px) {
+				margin-top: 40px;
+			}
+		}
+		a {
+			&:hover {
+				color: $accent;
+			}
+		}
+	}
+
+	&__bottom-socials {
+		@include flex(row, flex-start, center, 10px);
+		height: 62px;
+		padding: 10px 5px;
+		border-radius: 20px;
+		background: $bg-light;
+		@media (max-width: 991px) {
+			display: none;
+		}
+	}
+
+	&__bottom-social {
+		@include center;
+		@include box(52px, 52px, 30px);
+		a {
+			@include center;
+			@include box(100%, 100%, 30px);
+			padding: 4px 12.5px;
+			background: #2c2c2c;
+		}
+		a:hover {
+			background: $accent;
+		}
+	}
+}
