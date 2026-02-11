@@ -126,13 +126,6 @@
 	&__nav {
 		margin-top: 50px;
 		@include flex(row, center, center, 20px);
-	}
-
-	&__swiper-prev {
-		@include center;
-	}
-
-	&__swiper-next {
-		@include center;
+		padding-bottom: 6px;
 	}
 }

@@ -1,0 +1,66 @@
+@use '../abstracts' as *;
+
+.intro-wrap {
+	padding: 20px 0;
+	height: 498px;
+	background-image: url(../img/bg-intro.jpg);
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-position: top;
+	@media (max-width: 1024px) {
+		height: auto;
+		background-position: bottom;
+	}
+	@media (max-width: 767px) {
+		padding-top: 10px;
+		height: 440px;
+		background-position: bottom;
+	}
+}
+.intro {
+	max-width: 719px;
+	width: 100%;
+	margin: auto;
+	margin-top: 50px;
+	@include flex(column, center, center);
+	@media (max-width: 1024px) {
+		max-width: 100%;
+		margin-top: 30px;
+	}
+	&__img {
+		margin-bottom: 10px;
+		@media (max-width: 1024px) {
+			margin-bottom: 15px;
+		}
+	}
+
+	&__title {
+		color: $black;
+		font-family: $font-secondary;
+		@include text-style(40px, 500, 42px, center);
+		text-transform: uppercase;
+		margin-bottom: 20px;
+		@media (max-width: 767px) {
+			@include text-style(24px, 500, 28px, center);
+		}
+	}
+
+	&__text {
+		color: $black;
+		@include text-style(16px, 500, 20px, center);
+		margin-bottom: 20px;
+		@media (max-width: 767px) {
+			line-height: 18px;
+		}
+	}
+
+	&__btn {
+		@include box(291px, 68px);
+		@media (max-width: 767px) {
+			height: 51px;
+		}
+		@media (max-width: 480px) {
+			width: 100%;
+		}
+	}
+}

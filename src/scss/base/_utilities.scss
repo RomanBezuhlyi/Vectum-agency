@@ -1,3 +1,134 @@
+@use '../abstracts' as *;
+
 .no-scroll {
 	overflow: hidden;
+}
+
+.swiper-btn {
+	@include center;
+	@include box(50px, 50px, 30px);
+	padding: 9px;
+	background: $accent;
+	&:hover {
+		box-shadow: 0 4px 4px 0 #6c6c6c;
+	}
+}
+
+.swiper-button-disabled {
+	opacity: 0.5;
+	pointer-events: none;
+}
+
+.btn-primary {
+	@include center;
+	color: $white;
+	@include text-style(18px, 700, 20px, center);
+	border-radius: 48px;
+	background: linear-gradient(
+		274deg,
+		#ffc420 0%,
+		#fe4b08 39%,
+		#fe4b08 57%,
+		#ffc420 100%
+	);
+	background-size: 200% 200%;
+	box-shadow: 12px 0 12px 0 rgba(255, 255, 255, 0.25) inset,
+		-2px -4px 8px 0 rgba(255, 255, 255, 0.25) inset;
+	&:hover {
+		background-position: 100% 0;
+	}
+	&:disabled {
+		opacity: 0.5;
+		pointer-events: none;
+	}
+	@media (max-width: 767px) {
+		@include text-style(16px, 700, 18px, center);
+	}
+}
+
+.btn-secondary {
+	@include center;
+	color: $black;
+	@include text-style(18px, 700, 20px, center);
+	border-radius: 40px;
+	border: 2px solid $grey;
+	background: $bg-light;
+	box-shadow: 4px 4px 10px 2px #bcbcbc inset, -4px -4px 10px 2px #fff inset;
+	&:hover {
+		color: $accent;
+		border-radius: 40px;
+		border: 2px solid $accent;
+		background: #ececec;
+		box-shadow: 4px 4px 10px 2px #bcbcbc inset, -4px -4px 10px 2px #fff inset;
+	}
+	@media (max-width: 767px) {
+		@include text-style(16px, 700, 18px, center);
+	}
+}
+
+.fade-in {
+	opacity: 0;
+	transform: translateY(40px);
+	transition: opacity 0.8s ease, transform 0.8s ease;
+	will-change: opacity, transform;
+}
+
+.fade-in.is-visible {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+.fade-opacity {
+	opacity: 0;
+	transition: opacity 0.8s ease;
+	will-change: opacity;
+}
+
+.fade-opacity.is-visible {
+	opacity: 1;
+}
+
+.scroll-to-top {
+	@include center;
+	position: fixed;
+	right: 20px;
+	bottom: 40px;
+	@include box(50px, 50px, 50%);
+	background-color: $bg-dark;
+	cursor: pointer;
+	opacity: 0;
+	visibility: hidden;
+	@include transition;
+	z-index: 999;
+}
+
+.scroll-to-top.is-visible {
+	opacity: 1;
+	visibility: visible;
+}
+
+.breadcrumbs {
+	@include flex(row, flex-start, center, 5px);
+	&__item {
+		@include center;
+		color: $grey;
+		@include text-style(15px, 400, 15px);
+		@media (max-width: 991px) {
+			font-size: 14px;
+		}
+		a {
+			display: block;
+		}
+	}
+
+	&__item:last-child {
+		color: $black;
+	}
+}
+
+.mb-main {
+	margin-bottom: 100px !important;
+	@media (max-width: 991px) {
+		margin-bottom: 50px !important;
+	}
 }

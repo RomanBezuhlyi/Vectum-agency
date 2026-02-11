@@ -61,7 +61,8 @@
 			margin-bottom: 30px;
 		}
 		@media (max-width: 767px) {
-			@include flex(column, flex-start, flex-start, 10px);
+			@include flex(row, flex-start, flex-start, 10px);
+			flex-wrap: wrap;
 			margin-bottom: 20px;
 		}
 	}
@@ -70,6 +71,7 @@
 		@include box(297px, 58px, 10px);
 		padding: 4px 10px;
 		@include flex(row, flex-start, center, 10px);
+		color: $black;
 		background: $bg-light;
 		@include transition;
 		@media (max-width: 1024px) {
@@ -157,9 +159,6 @@
 
 	&__table-head-text {
 		@include text-style(12px, 400, 16px, center);
-	}
-
-	&__table-body {
 	}
 
 	&__table-body--row {
@@ -278,28 +277,11 @@
 	}
 
 	&__order-consultation {
-		@include center;
-		color: $white;
 		@include box(291px, 68px, 48px);
-		@include text-style(18px, 700, 20px, center);
-		background: linear-gradient(
-			274deg,
-			#ffc420 0%,
-			#fe4b08 39%,
-			#fe4b08 57%,
-			#ffc420 100%
-		);
-		background-size: 200% 200%; // робимо великий "полотно" градієнта
-		box-shadow: 12px 0 12px 0 rgba(255, 255, 255, 0.25) inset,
-			-2px -4px 8px 0 rgba(255, 255, 255, 0.25) inset;
 		margin: auto;
 		margin-top: 24px;
-		&:hover {
-			background-position: 100% 0; // при ховері зміщуємо градієнт
-		}
 		@media (max-width: 767px) {
-			@include box(343px, 39px, 48px);
-			@include text-style(14px, 700, 16px, center);
+			@include box(343px, 51px, 48px);
 		}
 		@media (max-width: 480px) {
 			width: 100%;

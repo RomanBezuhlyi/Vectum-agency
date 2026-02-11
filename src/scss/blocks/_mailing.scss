@@ -65,26 +65,9 @@
 		}
 
 		button {
-			@include center;
-			color: $white;
 			@include box(291px, 57px, 48px);
-			@include text-style(18px, 700, 20px, center);
-			background: linear-gradient(
-				274deg,
-				#ffc420 0%,
-				#fe4b08 39%,
-				#fe4b08 57%,
-				#ffc420 100%
-			);
-			background-size: 200% 200%; // робимо великий "полотно" градієнта
-			box-shadow: 12px 0 12px 0 rgba(255, 255, 255, 0.25) inset,
-				-2px -4px 8px 0 rgba(255, 255, 255, 0.25) inset;
-			&:hover {
-				background-position: 100% 0; // при ховері зміщуємо градієнт
-			}
 			@media (max-width: 767px) {
 				@include box(100%, 49px, 48px);
-				@include text-style(14px, 700, 16px, center);
 			}
 		}
 	}

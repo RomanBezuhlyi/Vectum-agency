@@ -5,6 +5,7 @@
 	@include flex(row, space-between, center);
 	padding-top: 20px;
 	padding-bottom: 20px;
+	z-index: 1111;
 	@media (max-width: 767px) {
 		padding-top: 14px;
 		padding-bottom: 14px;
@@ -30,6 +31,7 @@
 	&__nav-item {
 		position: relative;
 		cursor: pointer;
+		z-index: 2222;
 	}
 
 	&__nav-item:hover {
@@ -216,12 +218,13 @@
 .mobile-menu {
 	width: 100%;
 	&__top {
+		@include flex(column, flex-start, flex-start, 6px);
 		margin-bottom: 20px;
 	}
 
 	&__nav {
 		width: 100%;
-		@include flex(column, flex-start, flex-start, 10px);
+		@include flex(column, flex-start, flex-start, 16px);
 	}
 
 	&__nav-item {
@@ -291,7 +294,7 @@
 			margin-top: 0;
 			position: absolute;
 			left: 16px;
-			bottom: 64px;
+			bottom: 32px;
 		}
 	}
 

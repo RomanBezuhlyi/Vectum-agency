@@ -22,7 +22,7 @@
 		padding: 30px;
 	}
 	@media (max-width: 767px) {
-		padding: 10px 5px;
+		padding: 12px;
 		border-radius: 20px;
 	}
 	&__title {
@@ -59,19 +59,21 @@
 		@media (max-width: 1024px) {
 			grid-template-columns: repeat(2, 1fr);
 		}
+		@media (max-width: 480px) {
+			grid-template-columns: repeat(1, 1fr);
+		}
 	}
 
 	&__item {
-		padding: 5px 10px;
+		padding: 16px;
 		border-radius: 10px;
 		background: $white;
 		min-height: 230px;
 		@media (max-width: 1024px) {
 			min-height: 250px;
 		}
-		@media (max-width: 767px) {
-			max-height: 268px;
-			padding: 5px;
+		@media (max-width: 480px) {
+			min-height: auto;
 		}
 	}
 
@@ -87,7 +89,7 @@
 		@include text-style(20px, 500, 20px);
 		margin-bottom: 10px;
 		@media (max-width: 1024px) {
-			@include text-style(16px, 500, 18px);
+			@include text-style(18px, 500, 20px);
 		}
 		@media (max-width: 767px) {
 			margin-bottom: 5px;
@@ -101,7 +103,7 @@
 			@include text-style(16px, 400, 18px);
 		}
 		@media (max-width: 767px) {
-			@include text-style(11px, 400, 14px);
+			@include text-style(14px, 400, 16px);
 		}
 	}
 }

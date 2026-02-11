@@ -119,15 +119,7 @@
 	}
 
 	&__nav {
-		@include flex(row, center, center);
-	}
-
-	&__nav-prev {
-		@include center;
-	}
-
-	&__nav-next {
-		@include center;
+		@include flex(row, center, center, 20px);
 	}
 
 	&__link {
