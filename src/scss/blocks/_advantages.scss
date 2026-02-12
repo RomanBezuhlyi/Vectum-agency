@@ -25,18 +25,15 @@
 		padding: 12px;
 		border-radius: 20px;
 	}
+
 	&__title {
-		@include text-style(40px, 500, 42px, center);
+		max-width: 656px;
+		width: 100%;
+		margin: auto;
+		text-align: center;
 		margin-bottom: 20px;
 		@media (max-width: 1024px) {
-			@include text-style(32px, 500, 34px, center);
 			margin-bottom: 10px;
-		}
-		@media (max-width: 767px) {
-			@include text-style(24px, 500, 28px, center);
-		}
-		span {
-			color: $accent;
 		}
 	}
 

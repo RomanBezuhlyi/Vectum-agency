@@ -132,3 +132,71 @@
 		margin-bottom: 50px !important;
 	}
 }
+
+.title {
+	@include text-style(40px, 500, 42px);
+	@media (max-width: 1024px) {
+		@include text-style(32px, 500, 34px);
+	}
+	@media (max-width: 767px) {
+		@include text-style(24px, 500, 28px);
+	}
+	span {
+		&:not(:empty) {
+			color: $accent;
+		}
+
+		&:empty {
+			display: inline-block;
+			@include box(9px, 9px, 20px);
+			background: $accent;
+			margin-left: 5px;
+
+			@media (max-width: 1024px) {
+				@include box(7px, 7px, 20px);
+			}
+
+			@media (max-width: 767px) {
+				@include box(4px, 4px, 20px);
+			}
+		}
+	}
+}
+
+.pagination {
+	&__list {
+		@include flex(row, center, center, 5px);
+	}
+
+	&__item {
+		@include center;
+	}
+
+	&__item--next,
+	&__item--prev {
+		.pagination__link {
+			@include box(auto, auto, 0);
+			background: none !important;
+		}
+	}
+
+	&__link {
+		@include center;
+		color: $black;
+		@include text-style(20px, 400, 20px);
+		@include box(30px, 30px, 30px);
+		background: transparent;
+		svg {
+			fill: $black;
+		}
+	}
+
+	&__item.is-active &__link {
+		color: $white;
+		background: $accent;
+	}
+	&__item:hover &__link {
+		color: $white;
+		background: $accent;
+	}
+}

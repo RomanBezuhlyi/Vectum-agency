@@ -11,26 +11,8 @@
 .mailing {
 	@include flex(column, center, center);
 	&__title {
-		@include text-style(40px, 500, 42px, center);
+		text-align: center;
 		margin-bottom: 10px;
-		@media (max-width: 1024px) {
-			@include text-style(32px, 500, 34px, center);
-		}
-		@media (max-width: 767px) {
-			@include text-style(24px, 500, 28px, center);
-		}
-		span {
-			display: inline-block;
-			@include box(9px, 9px, 20px);
-			background: $accent;
-			margin-left: 5px;
-			@media (max-width: 1024px) {
-				@include box(7px, 7px, 20px);
-			}
-			@media (max-width: 767px) {
-				@include box(4px, 4px, 20px);
-			}
-		}
 	}
 
 	&__text {

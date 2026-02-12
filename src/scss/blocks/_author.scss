@@ -5,18 +5,12 @@
 	&__title {
 		max-width: 656px;
 		width: 100%;
-		@include text-style(40px, 500, 42px);
 		margin-bottom: 50px;
-		span {
-			color: $accent;
-		}
 		@media (max-width: 1024px) {
-			@include text-style(32px, 500, 34px);
 			margin-bottom: 20px;
 		}
 		@media (max-width: 767px) {
 			max-width: 100%;
-			@include text-style(24px, 500, 28px);
 		}
 	}
 
