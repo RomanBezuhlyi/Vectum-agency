@@ -40,7 +40,7 @@
 	&__item {
 		padding: 20px 10px;
 		border-radius: 20px;
-		background: #f8f8f8;
+		background: $bg-grey;
 		@media (max-width: 767px) {
 			padding: 12px 10px;
 		}

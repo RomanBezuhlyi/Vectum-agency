@@ -8,7 +8,7 @@
 	@include flex(column, center, center, 50px);
 	padding: 50px 30px;
 	border-radius: 40px;
-	background: $bg-light;
+	background: $bg-grey;
 	@media (max-width: 1024px) {
 		gap: 30px;
 		border-radius: 30px;

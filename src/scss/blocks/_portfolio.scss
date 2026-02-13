@@ -1,0 +1,60 @@
+@use '../abstracts' as *;
+
+.portfolio {
+	margin-bottom: 100px;
+	@media (max-width: 1024px) {
+		margin-bottom: 70px;
+	}
+	@media (max-width: 767px) {
+		margin-bottom: 50px;
+	}
+	&__top {
+		@include flex(row, space-between, center);
+		margin-bottom: 50px;
+		@media (max-width: 1024px) {
+			margin-bottom: 30px;
+		}
+		@media (max-width: 767px) {
+			margin-bottom: 20px;
+		}
+	}
+
+	&__nav {
+		@include flex(row, center, center, 20px);
+		&.desktop {
+			display: flex !important;
+			@media (max-width: 767px) {
+				display: none !important;
+			}
+		}
+		&.mobile {
+			display: none !important;
+			@media (max-width: 767px) {
+				margin-top: 20px;
+				display: flex !important;
+			}
+		}
+	}
+
+	&__link {
+		margin-top: 50px;
+		@include flex(row, flex-end, center, 10px);
+		@include text-style(32px, 400, normal);
+		text-transform: uppercase;
+		@include transition;
+		@media (max-width: 991px) {
+			margin-top: 20px;
+			@include text-style(20px, 400, 22px);
+		}
+		svg {
+			fill: $black;
+			@include transition;
+		}
+		&:hover {
+			color: $accent;
+			svg {
+				fill: $accent;
+			}
+		}
+	}
+}

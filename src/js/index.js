@@ -10,12 +10,14 @@ import { initOpacityAnimations } from './modules/initOpacityAnimations'
 import { initPhoneMask } from './modules/initPhoneMask'
 import { initPlannerForm } from './modules/initPlannerForm'
 import { initPopups } from './modules/initPopups'
+import { initPortfolioSwiper } from './modules/initPortfolioSwiper'
 import { initPriceCalculator } from './modules/initPriceCalculator'
 import { initReviewsSwiper } from './modules/initReviewsSwiper'
 import { initScrollAnimations } from './modules/initScrollAnimations'
 import { initScrollToTop } from './modules/initScrollToTop'
 import { initShowPhone } from './modules/initShowPhone'
 import { initTeamSwiper } from './modules/initTeamSwiper'
+import { scrollToAnchor } from './modules/scrollToAnchor'
 
 document.addEventListener('DOMContentLoaded', () => {
 	initShowPhone()
@@ -43,4 +45,6 @@ document.addEventListener('DOMContentLoaded', () => {
 	initScrollAnimations()
 	initOpacityAnimations()
 	initScrollToTop()
+	scrollToAnchor()
+	initPortfolioSwiper()
 })

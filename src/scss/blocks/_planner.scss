@@ -135,6 +135,10 @@
 				border: 1px solid $white;
 				background: $bg-light;
 				resize: none;
+				&::placeholder {
+					color: $grey;
+					opacity: 1;
+				}
 				@media (max-width: 767px) {
 					height: 119px;
 					@include text-style(14px, 400, 16px);

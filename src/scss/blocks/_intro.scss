@@ -55,11 +55,9 @@
 	}
 
 	&__btn {
-		@include box(291px, 68px);
-		@media (max-width: 767px) {
-			height: 51px;
-		}
+		padding: 26px 30px;
 		@media (max-width: 480px) {
+			padding: 16px;
 			width: 100%;
 		}
 	}

@@ -100,6 +100,9 @@
 	visibility: hidden;
 	@include transition;
 	z-index: 999;
+	&:hover {
+		background: $accent;
+	}
 }
 
 .scroll-to-top.is-visible {

@@ -55,7 +55,7 @@
 		padding: 4px 10px;
 		@include flex(row, flex-start, center, 10px);
 		color: $black;
-		background: $bg-light;
+		background: $bg-grey;
 		@include transition;
 		@media (max-width: 1024px) {
 			padding: 8px 16px;
@@ -154,6 +154,9 @@
 
 	&__table-body--col {
 		@include text-style(14px, 500, 16px);
+		a:hover {
+			color: $accent;
+		}
 		img {
 			margin: auto;
 		}
@@ -224,7 +227,7 @@
 	&__tariff {
 		padding: 20px;
 		border-radius: 20px;
-		border: 1px solid $bg-light;
+		border: 1px solid $bg-grey;
 		@include transition;
 	}
 
@@ -268,6 +271,57 @@
 		}
 		@media (max-width: 480px) {
 			width: 100%;
+		}
+	}
+}
+
+.price {
+	&__info {
+		margin-bottom: 70px;
+		@media (max-width: 767px) {
+			margin-bottom: 50px;
+		}
+	}
+
+	&__info-list {
+		width: 100%;
+		@include flex(column, flex-start, flex-start);
+	}
+
+	&__info-item {
+		width: 100%;
+		padding: 20px 0;
+		@include transition;
+	}
+
+	&__info-item:hover {
+		background: $bg-grey;
+		.price__info-item--title {
+			color: $accent;
+		}
+	}
+
+	&__info-item.highlight {
+		background: $bg-grey;
+		.price__info-item--title {
+			color: $accent;
+		}
+	}
+
+	&__info-item--title {
+		color: $black;
+		@include text-style(20px, 500, 20px);
+		margin-bottom: 10px;
+		@include transition;
+	}
+
+	&__info-item--text {
+		max-width: 687px;
+		width: 100%;
+		color: $black;
+		@include text-style(15px, 400, 18px);
+		@media (max-width: 767px) {
+			max-width: 100%;
 		}
 	}
 }

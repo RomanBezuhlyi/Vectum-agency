@@ -44,7 +44,7 @@
 		flex-shrink: 0;
 		padding: 20px;
 		border-radius: 20px;
-		background: $bg-light;
+		background: $bg-grey;
 		margin-bottom: 10px;
 		@media (max-width: 1024px) {
 			@include box(100%, auto);

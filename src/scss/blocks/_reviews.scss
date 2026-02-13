@@ -5,7 +5,9 @@
 	@media (max-width: 991px) {
 		margin-bottom: 50px;
 	}
-	&__title {
+
+	&__top {
+		@include flex(row, space-between, center);
 		margin-bottom: 50px;
 		@media (max-width: 1024px) {
 			margin-bottom: 30px;
@@ -18,7 +20,7 @@
 	&__swiper {
 		width: 629px;
 		margin-right: 0;
-		margin-bottom: 62px;
+		margin-bottom: 50px;
 		@media (max-width: 991px) {
 			width: 100%;
 			margin-bottom: 20px;
@@ -41,7 +43,7 @@
 			@include box(fit-content, 45px, 30px);
 			margin-left: auto;
 			margin-top: 5px;
-			background: $bg-light;
+			background: $bg-grey;
 			img {
 				@include box(40px, 40px, 30px);
 				object-fit: cover;
@@ -54,7 +56,7 @@
 		margin-bottom: 50px;
 		@media (max-width: 991px) {
 			@include flex(column, center, center, 20px);
-			margin-bottom: 20px;
+			margin-bottom: 0;
 		}
 	}
 
@@ -70,7 +72,7 @@
 		padding: 5px;
 		max-width: 60px;
 		@include box(100%, 60px, 30px);
-		background: $bg-light;
+		background: $bg-grey;
 		overflow: hidden;
 		transition: all 1s;
 		&.active {
@@ -105,6 +107,19 @@
 
 	&__nav {
 		@include flex(row, center, center, 20px);
+		&.desktop {
+			display: flex !important;
+			@media (max-width: 767px) {
+				display: none !important;
+			}
+		}
+		&.mobile {
+			display: none !important;
+			@media (max-width: 767px) {
+				display: flex !important;
+				margin-bottom: 20px;
+			}
+		}
 	}
 
 	&__link {

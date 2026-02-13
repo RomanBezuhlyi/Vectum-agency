@@ -1,0 +1,71 @@
+@use '../abstracts' as *;
+
+.project-team {
+	margin: 100px auto;
+	@media (max-width: 1024px) {
+		margin: 70px auto;
+	}
+	@media (max-width: 767px) {
+		margin: 50px auto;
+	}
+	&__title {
+		max-width: 656px;
+		width: 100%;
+		margin-bottom: 50px;
+		@media (max-width: 1024px) {
+			max-width: 100%;
+			margin-bottom: 30px;
+		}
+		@media (max-width: 767px) {
+			margin-bottom: 20px;
+		}
+	}
+
+	&__list {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 24px;
+		@media (max-width: 1024px) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+		@media (max-width: 767px) {
+			grid-template-columns: repeat(1, 1fr);
+			gap: 20px;
+		}
+	}
+
+	&__item {
+		@include flex(column, flex-start, flex-start, 10px);
+		padding: 20px;
+		border-radius: 30px;
+		background: $bg-grey;
+		@media (max-width: 767px) {
+			padding: 16px;
+			border-radius: 20px;
+		}
+	}
+
+	&__item--img {
+		@include center;
+		@include box(70px, 70px, 35px);
+		padding: 15px;
+		flex-shrink: 0;
+		background: $white;
+	}
+
+	&__item--title {
+		color: $black;
+		@include text-style(20px, 500, 20px);
+		@media (max-width: 767px) {
+			@include text-style(16px, 500, 18px);
+		}
+	}
+
+	&__item--text {
+		color: $black;
+		@include text-style(15px, 400, 18px);
+		@media (max-width: 767px) {
+			@include text-style(14px, 400, 16px);
+		}
+	}
+}
