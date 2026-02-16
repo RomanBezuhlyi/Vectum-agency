@@ -112,10 +112,12 @@
 
 .breadcrumbs {
 	@include flex(row, flex-start, center, 5px);
+	overflow: hidden;
 	&__item {
 		@include center;
 		color: $grey;
 		@include text-style(15px, 400, 15px);
+		flex-shrink: 0;
 		@media (max-width: 991px) {
 			font-size: 14px;
 		}
@@ -133,6 +135,13 @@
 	margin-bottom: 100px !important;
 	@media (max-width: 991px) {
 		margin-bottom: 50px !important;
+	}
+}
+
+.mt-main {
+	margin-top: 100px !important;
+	@media (max-width: 991px) {
+		margin-top: 50px !important;
 	}
 }
 

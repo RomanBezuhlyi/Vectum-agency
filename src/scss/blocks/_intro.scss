@@ -48,13 +48,13 @@
 	&__text {
 		color: $black;
 		@include text-style(16px, 500, 20px, center);
-		margin-bottom: 20px;
 		@media (max-width: 767px) {
 			line-height: 18px;
 		}
 	}
 
 	&__btn {
+		margin-top: 20px;
 		padding: 26px 30px;
 		@media (max-width: 480px) {
 			padding: 16px;

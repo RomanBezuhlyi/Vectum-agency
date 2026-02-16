@@ -1,0 +1,53 @@
+@use '../abstracts' as *;
+
+.about-us-wrap {
+	margin: 20px auto 50px auto;
+	@media (max-width: 767px) {
+		margin-top: 10px;
+	}
+}
+.about-us {
+	margin-top: 50px;
+	@include flex(column, center, center);
+	@media (max-width: 767px) {
+		margin-top: 30px;
+	}
+
+	&__icon {
+		margin-bottom: 10px;
+		@media (max-width: 767px) {
+			margin-bottom: 15px;
+		}
+	}
+
+	&__title {
+		color: $black;
+		@include text-style(40px, 500, 42px, center);
+		text-transform: uppercase;
+		margin-bottom: 10px;
+		@media (max-width: 767px) {
+			@include text-style(24px, 500, 28px, center);
+			margin-bottom: 20px;
+		}
+	}
+
+	&__text {
+		max-width: 719px;
+		width: 100%;
+		color: $black;
+		@include text-style(16px, 400, 20px, center);
+		margin-bottom: 50px;
+		@media (max-width: 767px) {
+			max-width: 100%;
+			margin-bottom: 20px;
+		}
+	}
+
+	&__img {
+		@include box(100%, 536px, 20px);
+		object-fit: cover;
+		@media (max-width: 767px) {
+			height: 227px;
+		}
+	}
+}

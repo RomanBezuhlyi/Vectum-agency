@@ -6,7 +6,8 @@
 		margin-bottom: 50px;
 	}
 
-	&__title {
+	&__top {
+		@include flex(row, space-between, center);
 		margin-bottom: 50px;
 		@media (max-width: 1024px) {
 			margin-bottom: 30px;
@@ -49,19 +50,20 @@
 	}
 
 	&__nav {
-		display: none;
-		@media (max-width: 991px) {
-			margin-top: 20px;
-			@include flex(row, center, center);
+		@include flex(row, center, center, 20px);
+		&.desktop {
+			display: flex !important;
+			@media (max-width: 767px) {
+				display: none !important;
+			}
 		}
-	}
-
-	&__nav-prev {
-		@include center;
-	}
-
-	&__nav-next {
-		@include center;
+		&.mobile {
+			display: none !important;
+			@media (max-width: 767px) {
+				margin-top: 20px;
+				display: flex !important;
+			}
+		}
 	}
 
 	&__link {

@@ -4,24 +4,73 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="icon" type="image/x-icon" href="./img/favicon.ico" />
 		<title>Vectum agency</title>
 		<link
 			rel="stylesheet"
 			href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
 		/>
-		<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
 		<link rel="stylesheet" href="./css/main.css" />
+		<style>
+			.main {
+				width: 100%;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+			}
+			.main__list {
+				margin: auto;
+				padding: 24px;
+				width: 300px;
+				height: auto;
+				background-color: bisque;
+				display: flex;
+				flex-direction: column;
+				gap: 12px;
+			}
+			.main__item {
+				font-size: 18px;
+			}
+			.main__item:hover {
+				color: brown;
+			}
+		</style>
 	</head>
 
 	<body>
-		@@include('blocks/header.html')
-		<main>
-			@@include('blocks/hero.html')@@include('blocks/advantages.html')
-			@@include('blocks/clients.html')@@include('blocks/price.html')@@include('blocks/planner.html')@@include('blocks/services.html')@@include('blocks/team.html')@@include('blocks/author.html')@@include('blocks/consultation.html')@@include('blocks/newspaper.html')@@include('blocks/roadmap.html')
-			@@include('blocks/reviews.html')@@include('blocks/articles.html')@@include('blocks/mailing.html')@@include('blocks/faq.html')
-		</main>
-		@@include('blocks/footer.html')
+		<div class="main">
+			<div class="container">
+				<ul class="main__list">
+					<li class="main__item">
+						<a href="home-page.html" target="_blank">Головна</a>
+					</li>
+					<li class="main__item">
+						<a href="directions-page.html" target="_blank">Напрямки</a>
+					</li>
+					<li class="main__item">
+						<a href="service-page.html" target="_blank">Послуги</a>
+					</li>
+					<li class="main__item">
+						<a href="cases-page.html" target="_blank">Портфоліо</a>
+					</li>
+					<li class="main__item">
+						<a href="about-page.html" target="_blank">Про нас</a>
+					</li>
+					<li class="main__item">
+						<a href="blog-page.html" target="_blank">Блог</a>
+					</li>
+					<li class="main__item">
+						<a href="article-page.html" target="_blank">Стаття</a>
+					</li>
+					<li class="main__item">
+						<a href="case-page.html" target="_blank">Кейс</a>
+					</li>
+					<li class="main__item">
+						<a href="vacancies-page.html" target="_blank">Вакансії</a>
+					</li>
+				</ul>
+			</div>
+		</div>
 		<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 		<script src="https://unpkg.com/imask"></script>
 		<script src="./js/index.bundle.js"></script>

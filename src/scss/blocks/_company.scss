@@ -1,0 +1,79 @@
+@use '../abstracts' as *;
+
+.company {
+	margin-bottom: 100px;
+	@media (max-width: 1024px) {
+		margin-bottom: 70px;
+	}
+	@media (max-width: 767px) {
+		margin-bottom: 50px;
+	}
+	&__content {
+		@include flex(row, flex-start, flex-end, 59px);
+		@media (max-width: 1024px) {
+			flex-direction: column;
+			gap: 20px;
+		}
+	}
+
+	&__title {
+		margin-bottom: 50px;
+		@media (max-width: 1024px) {
+			margin-bottom: 30px;
+		}
+		@media (max-width: 767px) {
+			margin-bottom: 20px;
+		}
+	}
+
+	&__text {
+		color: $black;
+		@include text-style(20px, 400, 24px);
+		margin-bottom: 100px;
+		@media (max-width: 1024px) {
+			margin-bottom: 50px;
+		}
+		@media (max-width: 767px) {
+			@include text-style(16px, 400, 18px);
+			margin-bottom: 20px;
+		}
+	}
+
+	&__list {
+		@include flex(row, flex-start, flex-start, 24px);
+		@media (max-width: 767px) {
+			flex-direction: column;
+			gap: 10px;
+		}
+	}
+
+	&__item {
+		max-width: 203px;
+		width: 100%;
+		@include flex(column, flex-start, flex-start, 5px);
+	}
+
+	&__item-num {
+		color: $black;
+		@include text-style(40px, 500, 42px);
+		@media (max-width: 767px) {
+			@include text-style(32px, 500, 34px);
+		}
+	}
+
+	&__item-text {
+		color: $black;
+		@include text-style(15px, 400, 18px);
+		@media (max-width: 767px) {
+			@include text-style(14px, 400, 16px);
+		}
+	}
+
+	&__img {
+		@include box(556px, 324px, 20px);
+		object-fit: cover;
+		@media (max-width: 1024px) {
+			@include box(100%, 227px, 20px);
+		}
+	}
+}

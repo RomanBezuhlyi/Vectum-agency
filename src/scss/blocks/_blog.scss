@@ -1,0 +1,103 @@
+@use '../abstracts' as *;
+
+.blog {
+	margin-top: 50px;
+	margin-bottom: 100px;
+	@media (max-width: 1024px) {
+		margin-bottom: 70px;
+	}
+	@media (max-width: 767px) {
+		margin-bottom: 50px;
+	}
+
+	&__list {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		row-gap: 50px;
+		margin-bottom: 50px;
+		@media (max-width: 767px) {
+			grid-template-columns: repeat(1, 1fr);
+		}
+	}
+
+	&__item {
+		&:nth-child(odd) {
+			padding-right: 120px;
+			border-right: 1px solid #e5e5e5;
+			@media (max-width: 1024px) {
+				padding-right: 60px;
+			}
+			@media (max-width: 767px) {
+				padding-right: 0;
+				border-right: none;
+			}
+		}
+		&:nth-child(even) {
+			padding-left: 120px;
+			@media (max-width: 1024px) {
+				padding-left: 60px;
+			}
+			@media (max-width: 767px) {
+				padding-left: 0;
+			}
+		}
+	}
+
+	&__item-mark {
+		color: $black;
+		@include text-style(14px, 500, 16px);
+		margin-bottom: 10px;
+	}
+
+	&__item-title {
+		color: $accent;
+		@include text-style(20px, 500, 20px);
+		@include transition;
+		cursor: pointer;
+		margin-bottom: 10px;
+		@media (max-width: 767px) {
+			font-size: 18px;
+		}
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+
+	&__item-text {
+		color: $black;
+		@include text-style(15px, 400, 18px);
+		margin-bottom: 25px;
+		display: -webkit-box;
+		-webkit-line-clamp: 4;
+		-webkit-box-orient: vertical;
+		overflow: hidden;
+		@media (max-width: 767px) {
+			font-size: 14px;
+			margin-bottom: 10px;
+		}
+	}
+
+	&__item-bottom {
+		width: 100%;
+		@include flex(row, space-between, center);
+	}
+
+	&__item-author {
+		@include flex(row, flex-start, center, 10px);
+	}
+
+	&__item-author--avatar {
+		@include box(30px, 30px, 30px);
+		object-fit: cover;
+	}
+
+	&__item-author--name {
+		color: $black;
+		@include text-style(14px, 500, 16px);
+	}
+
+	&__item-date {
+		color: $grey;
+		@include text-style(14px, 400, 16px);
+	}
+}

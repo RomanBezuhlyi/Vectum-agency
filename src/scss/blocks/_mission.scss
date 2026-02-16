@@ -1,0 +1,44 @@
+@use '../abstracts' as *;
+
+.mission {
+	margin-bottom: 100px;
+	@media (max-width: 1024px) {
+		margin-bottom: 70px;
+	}
+	@media (max-width: 767px) {
+		margin-bottom: 50px;
+	}
+	&__title {
+		margin-bottom: 50px;
+		@media (max-width: 1024px) {
+			margin-bottom: 30px;
+		}
+		@media (max-width: 767px) {
+			margin-bottom: 20px;
+		}
+	}
+
+	&__content {
+		@include flex(row, flex-start, flex-start, 50px);
+		@media (max-width: 1024px) {
+			flex-direction: column;
+			gap: 20px;
+		}
+	}
+
+	&__img {
+		@include box(556px, 324px, 20px);
+		object-fit: cover;
+		@media (max-width: 1024px) {
+			@include box(100%, 227px, 20px);
+		}
+	}
+
+	&__text {
+		color: $black;
+		@include text-style(20px, 400, 24px);
+		@media (max-width: 767px) {
+			@include text-style(16px, 400, 18px);
+		}
+	}
+}

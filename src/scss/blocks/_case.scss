@@ -1,0 +1,168 @@
+@use '../abstracts' as *;
+
+.case {
+	margin-top: 50px;
+	margin-bottom: 100px;
+	@media (max-width: 1024px) {
+		margin-bottom: 70px;
+	}
+	@media (max-width: 767px) {
+		margin-top: 20px;
+		margin-bottom: 50px;
+	}
+
+	&__body {
+		position: relative;
+		@include flex(row, center, flex-start, 42px);
+		@media (max-width: 1024px) {
+			flex-direction: column;
+			gap: 20px;
+		}
+	}
+
+	&__nav {
+		position: sticky;
+		left: 0;
+		top: 100px;
+		max-width: 243px;
+		width: 100%;
+		@include flex(column, flex-start, flex-start);
+		@media (max-width: 1024px) {
+			position: static;
+			top: 0;
+			max-width: 100%;
+		}
+		a {
+			width: 100%;
+			padding: 10px 20px;
+			color: $accent;
+			@include text-style(14px, 400, 16px);
+			@media (max-width: 1024px) {
+				padding: 10px 0;
+			}
+		}
+		a:hover {
+			color: $white;
+			background: $accent;
+			@media (max-width: 1024px) {
+				color: $accent;
+				background: $white;
+			}
+		}
+		a.active {
+			color: $white;
+			background: $accent;
+			@media (max-width: 1024px) {
+				color: $accent;
+				background: $white;
+			}
+		}
+	}
+
+	&__content {
+		img {
+			@include box(100%, 345px, 20px);
+			object-fit: cover;
+			margin: 20px 0;
+			@media (max-width: 767px) {
+				height: 229px;
+			}
+		}
+		p,
+		li,
+		span,
+		a {
+			color: $black;
+			@include text-style(18px, 400, 20px);
+			@media (max-width: 767px) {
+				@include text-style(14px, 400, 18px);
+			}
+		}
+		a {
+			color: $accent;
+		}
+		h2 {
+			color: $black;
+			@include text-style(40px, 500, 42px);
+			margin: 20px 0;
+			@media (max-width: 767px) {
+				@include text-style(24px, 500, 28px);
+				margin: 10px 0;
+			}
+		}
+		h3 {
+			color: $black;
+			@include text-style(20px, 500, 22px);
+			margin-bottom: 10px;
+			@media (max-width: 767px) {
+				@include text-style(16px, 500, 18px);
+			}
+		}
+		ul {
+			list-style-type: disc;
+			margin: 10px 0 10px 20px;
+		}
+		ol {
+			list-style-type: georgian;
+			margin: 10px 0 10px 20px;
+		}
+	}
+
+	&__author {
+		position: sticky;
+		top: 100px;
+		right: 0;
+		max-width: 243px;
+		width: 100%;
+		@media (max-width: 1024px) {
+			position: static;
+			top: 0;
+			max-width: 600px;
+			margin: auto;
+			@include flex(column, center, center);
+		}
+	}
+
+	&__author-avatar {
+		position: relative;
+		@include box(85px, 74px, 0px);
+		margin-bottom: 10px;
+		@media (max-width: 767px) {
+			@include box(64px, 56px, 0px);
+		}
+	}
+
+	&__author-img {
+		@include box(74px, 74px, 50px);
+		object-fit: cover;
+		@media (max-width: 767px) {
+			@include box(56px, 56px, 50px);
+		}
+	}
+
+	&__author-link {
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		@include center;
+		@include box(32px, 32px, 40px);
+		background: $black;
+		&:hover {
+			background: $accent;
+		}
+	}
+
+	&__author-name {
+		color: $black;
+		@include text-style(16px, 500, 20px);
+		margin-bottom: 5px;
+	}
+
+	&__author-text {
+		color: $black;
+		@include text-style(15px, 400, 18px);
+		@media (max-width: 1024px) {
+			text-align: center;
+		}
+	}
+}
