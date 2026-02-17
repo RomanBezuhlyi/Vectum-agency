@@ -1,0 +1,131 @@
+@use '../abstracts' as *;
+
+.policy {
+	padding-top: 50px;
+	padding-bottom: 100px;
+	@media (max-width: 1024px) {
+		padding-top: 30px;
+		padding-bottom: 70px;
+	}
+	@media (max-width: 767px) {
+		padding-top: 20px;
+		padding-bottom: 50px;
+	}
+
+	/* Заголовки */
+	h1,
+	h2,
+	h3,
+	h4 {
+		line-height: 1.3;
+		font-weight: 600;
+		margin-top: 40px;
+		margin-bottom: 16px;
+		color: #111;
+	}
+
+	h1 {
+		font-size: 32px;
+		margin-top: 0;
+		border-bottom: 2px solid #f0f0f0;
+		padding-bottom: 12px;
+	}
+
+	h2 {
+		font-size: 24px;
+		border-left: 4px solid $accent;
+		padding-left: 12px;
+	}
+
+	h3 {
+		font-size: 20px;
+	}
+
+	h4 {
+		font-size: 18px;
+	}
+
+	/* Параграфи */
+	p {
+		margin-bottom: 16px;
+	}
+
+	/* Списки */
+	ul,
+	ol {
+		margin: 16px 0 16px 24px;
+		padding: 0;
+	}
+
+	ul {
+		list-style-type: disc;
+	}
+
+	ol {
+		list-style-type: decimal;
+	}
+
+	li {
+		margin-bottom: 8px;
+	}
+
+	/* Посилання */
+	a {
+		color: $accent;
+		text-decoration: none;
+		border-bottom: 1px solid rgba(246, 94, 1, 0.3);
+		transition: all 0.2s ease;
+	}
+
+	a:hover {
+		color: $accent;
+		border-bottom-color: $accent;
+	}
+
+	/* Таблиці */
+	table {
+		width: 100%;
+		border-collapse: collapse;
+		margin: 24px 0;
+		font-size: 15px;
+	}
+
+	th,
+	td {
+		border: 1px solid #e5e5e5;
+		padding: 10px 12px;
+		text-align: left;
+	}
+
+	th {
+		background: #f9f9f9;
+		font-weight: 600;
+	}
+
+	/* Виділені блоки */
+	blockquote {
+		margin: 24px 0;
+		padding: 16px 20px;
+		background: #f9f9f9;
+		border-left: 4px solid $accent;
+		font-style: italic;
+	}
+
+	/* Горизонтальна лінія */
+	hr {
+		border: none;
+		border-top: 1px solid #e5e5e5;
+		margin: 40px 0;
+	}
+
+	/* Адаптив */
+	@media (max-width: 768px) {
+		h1 {
+			font-size: 26px;
+		}
+
+		h2 {
+			font-size: 20px;
+		}
+	}
+}

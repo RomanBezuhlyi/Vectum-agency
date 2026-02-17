@@ -19,6 +19,7 @@ import { initScrollToTop } from './modules/initScrollToTop'
 import { initShowPhone } from './modules/initShowPhone'
 import { initStickyHeaderShadow } from './modules/initStickyHeaderShadow'
 import { initTeamSwiper } from './modules/initTeamSwiper'
+import { initVacancyContentSwitcher } from './modules/initVacancyContentSwitcher'
 import { scrollToAnchor } from './modules/scrollToAnchor'
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -59,4 +60,5 @@ document.addEventListener('DOMContentLoaded', () => {
 		navSelector: '.case__nav',
 	})
 	initStickyHeaderShadow()
+	initVacancyContentSwitcher()
 })

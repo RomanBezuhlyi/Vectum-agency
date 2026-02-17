@@ -23,7 +23,7 @@
 	&__nav {
 		position: sticky;
 		left: 0;
-		top: 100px;
+		top: 120px;
 		max-width: 243px;
 		width: 100%;
 		@include flex(column, flex-start, flex-start);
@@ -110,7 +110,7 @@
 
 	&__author {
 		position: sticky;
-		top: 100px;
+		top: 120px;
 		right: 0;
 		max-width: 243px;
 		width: 100%;
