@@ -1541,105 +1541,187 @@
 	</svg>
 </button>
 
-<!-- Попапи -->
-<!-- <div class="popup" id="audit">
-	<div class="popup__content">
-		<button class="popup__close">
+<!-- МОДАЛКА 1 -->
+<div class="modal" id="modal-audit" aria-hidden="true">
+	<div class="modal__overlay" data-modal-close></div>
+	<div class="modal__dialog">
+		<button class="modal__close" data-modal-close>
 			<img src="./img/icon-close.svg" alt="" />
 		</button>
-		<h2 class="popup__title">Передзвоніть мені</h2>
-		<p class="popup__text">
+		<h2 class="modal__title title">Замовити безкоштовний аудит<span></span></h2>
+		<p class="modal__text">
 			Отримайте детальну та зрозумілу комерційну пропозицію
 		</p>
-		<div class="planner__form popup__form">
-			<div class="planner__form-tabs">
-				<button class="planner__form-tab">PPS</button>
-				<button class="planner__form-tab">Таргет</button>
-				<button class="planner__form-tab">SMM</button>
-				<button class="planner__form-tab">Influence</button>
-				<button class="planner__form-tab">Tik-Tok</button>
-				<button class="planner__form-tab">Digital marketing</button>
-				<button class="planner__form-tab">Web development</button>
-				<button class="planner__form-tab">Інше</button>
-			</div>
-			<form>
-				<input type="hidden" name="selectedService" id="selected-service" />
-				<div class="row">
-					<input type="text" placeholder="Ваше ім’я" required />
-					<input
-						type="text"
-						placeholder="Номер телефону"
-						data-phone-input
-						required
-					/>
-				</div>
-				<div class="row">
-					<input type="email" placeholder="Ваш E-mail" />
-					<input type="text" placeholder="Посилання на сайт" />
-				</div>
-				<textarea placeholder="Коментар"></textarea>
-				<label class="custom-checkbox form-checkbox">
-					<input type="checkbox" class="consent-checkbox" required />
-					<span class="checkmark"></span>
-					<span class="checkbox-text">
-						Надсилаючи повідомлення, я підтверджую, що ознайомлений та згоден з
-						<a href="#">політикою конфіденційності</a> даного сайту
-					</span>
-				</label>
-				<button class="" type="submit">Надіслати</button>
-			</form>
+		<div class="modal__tabs">
+			<button class="modal__tab">PPS</button>
+			<button class="modal__tab">Таргет</button>
+			<button class="modal__tab">SMM</button>
+			<button class="modal__tab">Influence</button>
+			<button class="modal__tab">Tik-Tok</button>
+			<button class="modal__tab">Digital marketing</button>
+			<button class="modal__tab">Web development</button>
+			<button class="modal__tab">Інше</button>
 		</div>
+		<form class="modal__form">
+			<input
+				type="hidden"
+				name="selectedService"
+				id="selected-service"
+				required
+			/>
+			<div class="modal__form-row">
+				<input
+					class="modal__form-input"
+					type="text"
+					placeholder="Ваше ім’я*"
+					required
+				/>
+				<input
+					class="modal__form-input"
+					type="text"
+					placeholder="Номер телефону*"
+					required
+					data-phone-input
+				/>
+			</div>
+			<div class="modal__form-row">
+				<input
+					class="modal__form-input"
+					type="email"
+					placeholder="Ваш E-mail"
+					required
+				/>
+				<input
+					class="modal__form-input"
+					type="text"
+					placeholder="Сайт"
+					required
+					data-phone-input
+				/>
+			</div>
+			<textarea
+				class="modal__form-textarea"
+				placeholder="Додаткова інформація"
+			></textarea>
+			<button class="modal__form-btn btn-primary" type="submit">
+				Надіслати
+			</button>
+		</form>
 	</div>
 </div>
 
-<div class="popup" id="priceRequest">
-	<div class="popup__content">
-		<button class="popup__close">
+<!-- МОДАЛКА 2 -->
+<div class="modal" id="modal-consult" aria-hidden="true">
+	<div class="modal__overlay" data-modal-close></div>
+	<div class="modal__dialog">
+		<button class="modal__close" data-modal-close>
 			<img src="./img/icon-close.svg" alt="" />
 		</button>
-		<h2>Запит ціни</h2>
-		<form class="popup__form">
-			<div class="input">
-				<label>Імʼя</label>
-				<input type="text" placeholder="Імʼя" required />
-			</div>
-			<div class="input">
-				<label>Email</label>
-				<input type="text" placeholder="example@email.com" required />
-			</div>
-			<div class="input">
-				<label>Номер телефону</label>
+		<h2 class="modal__title title">Замовити консультацію<span></span></h2>
+		<p class="modal__text">
+			Залиште свої контакти, щоб отримати безкоштовну консультацію.
+		</p>
+		<form class="modal__form">
+			<div class="modal__form-row">
 				<input
+					class="modal__form-input"
 					type="text"
-					placeholder="Номер телефону"
-					data-phone-input
+					placeholder="Ваше ім’я*"
 					required
 				/>
+				<input
+					class="modal__form-input"
+					type="text"
+					placeholder="Номер телефону*"
+					required
+					data-phone-input
+				/>
 			</div>
-			<button type="submit">Відправити</button>
+			<label class="custom-checkbox form-checkbox">
+				<input type="checkbox" class="consent-checkbox" required />
+				<span class="checkmark"></span>
+				<span class="checkbox-text">
+					Надсилаючи повідомлення, я підтверджую, що ознайомлений та згоден з
+					<a href="#">політикою конфіденційності</a> даного сайту
+				</span>
+			</label>
+			<button class="modal__form-btn btn-primary" type="submit">
+				Надіслати
+			</button>
 		</form>
 	</div>
-</div> -->
-<!-- 
-<div class="popup" id="feedback">
-	<div class="popup__content">
-		<button class="popup__close">
+</div>
+
+<!-- МОДАЛКА 3 -->
+<div class="modal" id="modal-job" aria-hidden="true">
+	<div class="modal__overlay" data-modal-close></div>
+	<div class="modal__dialog">
+		<button class="modal__close" data-modal-close>
 			<img src="./img/icon-close.svg" alt="" />
 		</button>
-		<h2>Залишити відгук</h2>
-		<form class="popup__form">
-			<div class="input">
-				<label>Імʼя</label>
-				<input type="text" placeholder="Імʼя" required />
+		<h2 class="modal__title title">Відгукнутись на вакансію<span></span></h2>
+		<p class="modal__text">
+			Надішліть своє резюме та коротко розкажіть про себе.
+		</p>
+		<form class="modal__form">
+			<input
+				class="modal__form-input"
+				type="text"
+				placeholder="Ваше ім’я*"
+				required
+			/>
+			<input
+				class="modal__form-input"
+				type="text"
+				placeholder="Номер телефону*"
+				required
+				data-phone-input
+			/>
+			<input
+				class="modal__form-input"
+				type="email"
+				placeholder="Ваш E-mail*"
+				required
+			/>
+			<textarea
+				class="modal__form-textarea"
+				placeholder="Додаткова інформація"
+			></textarea>
+			<div class="resume-upload">
+				<div class="resume-upload__area">
+					<p class="resume-upload__text">
+						Перетягніть файл сюди або
+						<span class="resume-upload__choose">оберіть файл</span>
+					</p>
+
+					<div class="resume-upload__actions" style="display: none">
+						<button type="button" class="resume-upload__change">
+							Змінити файл
+						</button>
+					</div>
+				</div>
+
+				<input
+					type="file"
+					id="resume-file"
+					class="resume-input"
+					accept=".pdf,.doc,.docx"
+				/>
 			</div>
-			<div class="textarea">
-				<label>Відгук</label>
-				<textarea placeholder="Відгук" required></textarea>
-			</div>
-			<button type="submit">Відправити</button>
+			<label class="custom-checkbox form-checkbox">
+				<input type="checkbox" class="consent-checkbox" required />
+				<span class="checkmark"></span>
+				<span class="checkbox-text">
+					Надсилаючи повідомлення, я підтверджую, що ознайомлений та згоден з
+					<a href="#">політикою конфіденційності</a> даного сайту
+				</span>
+			</label>
+			<button class="modal__form-btn btn-primary" type="submit">
+				Надіслати
+			</button>
 		</form>
 	</div>
-</div> -->
+</div>
 
 		<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 		<script src="https://unpkg.com/imask"></script>

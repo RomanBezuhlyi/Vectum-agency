@@ -7,15 +7,16 @@ import { initHeroArrowAnimation } from './modules/initHeroArrowAnimation'
 import { initHeroTyping } from './modules/initHeroTyping'
 import { initMobileMenu } from './modules/initMobileMenu'
 import { initMobileMenuAccordion } from './modules/initMobileMenuAccordion'
+import { initModals } from './modules/initModals'
 import { initOpacityAnimations } from './modules/initOpacityAnimations'
 import { initPhoneMask } from './modules/initPhoneMask'
-import { initPlannerForm } from './modules/initPlannerForm'
-import { initPopups } from './modules/initPopups'
 import { initPortfolioSwiper } from './modules/initPortfolioSwiper'
 import { initPriceCalculator } from './modules/initPriceCalculator'
+import { initResumeUpload } from './modules/initResumeUpload'
 import { initReviewsSwiper } from './modules/initReviewsSwiper'
 import { initScrollAnimations } from './modules/initScrollAnimations'
 import { initScrollToTop } from './modules/initScrollToTop'
+import { initServiceForms } from './modules/initServiceForms'
 import { initShowPhone } from './modules/initShowPhone'
 import { initStickyHeaderShadow } from './modules/initStickyHeaderShadow'
 import { initTeamSwiper } from './modules/initTeamSwiper'
@@ -36,12 +37,12 @@ document.addEventListener('DOMContentLoaded', () => {
 		priceDisplaySelector: '#custom-price-mobile',
 	})
 	initPhoneMask()
-	initPlannerForm()
+	initServiceForms()
 	initTeamSwiper()
 	initReviewsSwiper()
 	initArticlesSwiper()
 	initFaqAccordion()
-	initPopups()
+	initModals()
 	initCounters()
 	initHeroTyping()
 	initHeroArrowAnimation()
@@ -61,4 +62,5 @@ document.addEventListener('DOMContentLoaded', () => {
 	})
 	initStickyHeaderShadow()
 	initVacancyContentSwitcher()
+	initResumeUpload()
 })

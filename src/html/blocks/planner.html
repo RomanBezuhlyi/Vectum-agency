@@ -30,18 +30,23 @@
 						<button class="planner__form-tab">Інше</button>
 					</div>
 					<form>
-						<input type="hidden" name="selectedService" id="selected-service" />
+						<input
+							type="hidden"
+							name="selectedService"
+							id="selected-service"
+							required
+						/>
 						<div class="row">
 							<input type="text" placeholder="Ваше ім’я" required />
 							<input
 								type="text"
-								placeholder="Номер телефону"
+								placeholder="Номер телефону*"
 								data-phone-input
 								required
 							/>
 						</div>
 						<div class="row">
-							<input type="email" placeholder="Ваш E-mail" />
+							<input type="email" placeholder="Ваш E-mail*" required />
 							<input type="text" placeholder="Посилання на сайт" />
 						</div>
 						<textarea placeholder="Коментар"></textarea>

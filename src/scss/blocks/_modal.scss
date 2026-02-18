@@ -1,0 +1,151 @@
+@use '../abstracts' as *;
+
+.modal {
+	position: fixed;
+	inset: 0;
+	@include center;
+	z-index: 11111;
+	opacity: 0;
+	visibility: hidden;
+	@include transition;
+
+	&--active {
+		opacity: 1;
+		visibility: visible;
+	}
+
+	&__overlay {
+		position: absolute;
+		inset: 0;
+		background: rgba(0, 0, 0, 0.6);
+	}
+
+	&__dialog {
+		position: relative;
+		padding: 20px;
+		max-width: 590px;
+		width: 100%;
+		border-radius: 20px;
+		background: $white;
+		box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+		transform: translateY(20px);
+		@include transition;
+		@media (max-width: 767px) {
+			max-width: calc(100% - 24px);
+			padding: 16px;
+		}
+		@media (max-height: 700px) {
+			overflow-y: auto;
+			max-height: 95vh;
+		}
+	}
+
+	&--active .modal__dialog {
+		transform: translateY(0);
+	}
+
+	&__close {
+		margin-left: auto;
+		@include center;
+	}
+
+	&__title {
+		margin-bottom: 10px;
+	}
+
+	&__text {
+		color: $black;
+		@include text-style(16px, 500, 20px);
+		margin-bottom: 20px;
+		@media (max-width: 767px) {
+			@include text-style(14px, 500, 16px);
+		}
+	}
+
+	&__tabs {
+		@include flex(row, flex-start, center, 5px);
+		flex-wrap: wrap;
+		margin-bottom: 20px;
+	}
+
+	&__tab {
+		@include center;
+		padding: 10px 20px;
+		border-radius: 20px;
+		color: $black;
+		@include text-style(18px, 500, 20px, center);
+		border: 1px solid $grey;
+		background: $white;
+		@media (max-width: 767px) {
+			padding: 8px 10px;
+			@include text-style(14px, 500, 16px, center);
+		}
+		&:hover {
+			color: $accent;
+			border-color: $accent;
+		}
+		&.active {
+			color: $accent;
+			border-color: $accent;
+		}
+	}
+
+	&__form {
+		width: 100%;
+		@include flex(column, flex-start, flex-start, 20px);
+		@media (max-width: 767px) {
+			gap: 10px;
+		}
+	}
+
+	&__form-row {
+		width: 100%;
+		@include flex(row, flex-start, center, 20px);
+		@media (max-width: 767px) {
+			flex-direction: column;
+			gap: 10px;
+		}
+	}
+
+	&__form-input {
+		@include box(100%, 55px, 25px);
+		padding: 23px 24px;
+		color: $black;
+		@include text-style(16px, 400, 18px);
+		border: 1px solid #e8e8e8;
+		background: #f7f7f7;
+		@include transition;
+		&:focus {
+			border-color: $accent;
+		}
+		&::placeholder {
+			color: $grey;
+			opacity: 1;
+		}
+	}
+
+	&__form-textarea {
+		@include box(100%, 141px, 25px);
+		padding: 23px 24px;
+		color: $black;
+		@include text-style(16px, 400, 18px);
+		border: 1px solid #e8e8e8;
+		background: #f7f7f7;
+		@include transition;
+		resize: none;
+		&:focus {
+			border-color: $accent;
+		}
+		&::placeholder {
+			color: $grey;
+			opacity: 1;
+		}
+	}
+
+	&__form-btn {
+		@include box(100%, 68px);
+		@media (max-width: 767px) {
+			height: 51px;
+		}
+	}
+}

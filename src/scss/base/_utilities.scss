@@ -37,10 +37,6 @@
 	&:hover {
 		background-position: 100% 0;
 	}
-	&:disabled {
-		opacity: 0.5;
-		pointer-events: none;
-	}
 	@media (max-width: 767px) {
 		@include text-style(16px, 700, 18px, center);
 	}
@@ -210,5 +206,124 @@
 	&__item:hover &__link {
 		color: $white;
 		background: $accent;
+	}
+}
+
+.resume-upload {
+	position: relative;
+	width: 100%;
+}
+
+.resume-upload__area {
+	position: relative;
+	padding: 23px 24px;
+	text-align: center;
+	border-radius: 25px;
+	border: 2px dashed $accent;
+	cursor: pointer;
+	@include transition;
+}
+
+.resume-upload__area.dragover {
+	border-color: $accent;
+	background: #f5f9ff;
+}
+
+.resume-input {
+	position: absolute;
+	inset: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	cursor: pointer;
+}
+
+.resume-upload__actions {
+	margin-top: 15px;
+}
+
+.resume-upload__text {
+	@include text-style(16px, 400, 18px, center);
+}
+
+.resume-upload__actions button {
+	padding: 6px 12px;
+	border: 1px solid $accent;
+	background: $white;
+	color: $accent;
+	border-radius: 5px;
+	@include text-style(16px, 400, 18px, center);
+	cursor: pointer;
+}
+
+.resume-upload__actions button:hover {
+	background: $accent;
+	color: $white;
+}
+
+.form-checkbox {
+	@include flex(row, flex-start, flex-start, 12px);
+	cursor: pointer;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	@media (max-width: 767px) {
+		gap: 10px;
+	}
+
+	input {
+		opacity: 0 !important;
+		width: 0 !important;
+		height: 0 !important;
+		position: absolute !important;
+	}
+
+	.checkmark {
+		position: relative;
+		@include box(20px, 20px, 5px);
+		flex-shrink: 0;
+		@include transition;
+		border: 1px solid $accent;
+		@media (max-width: 767px) {
+			@include box(18px, 18px, 5px);
+		}
+
+		&::after {
+			content: '';
+			position: absolute;
+			display: none;
+			left: 6px;
+			top: 3px;
+			@include box(4px, 8px);
+			border: solid $white;
+			border-width: 0 2px 2px 0;
+			transform: rotate(45deg);
+			@media (max-width: 767px) {
+				left: 5px;
+				top: 2px;
+			}
+		}
+	}
+
+	input:checked ~ .checkmark {
+		background-color: $accent;
+	}
+
+	input:checked ~ .checkmark::after {
+		display: block;
+	}
+
+	.checkbox-text {
+		flex: 1;
+		@include text-style(14px, 400, 13px);
+		@media (max-width: 767px) {
+			font-size: 14px;
+		}
+		a {
+			text-decoration-line: underline;
+			text-decoration-style: solid;
+			text-decoration-skip-ink: auto;
+			text-decoration-thickness: auto;
+			text-underline-offset: auto;
+		}
 	}
 }
