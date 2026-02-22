@@ -1427,13 +1427,11 @@ button {
 }
 
 .clients {
-  padding-top: 90px;
-  padding-bottom: 100px;
+  margin-bottom: 100px;
 }
 @media (max-width: 1024px) {
   .clients {
-    padding-top: 70px;
-    padding-bottom: 70px;
+    margin-bottom: 70px;
   }
 }
 @media (max-width: 767px) {
