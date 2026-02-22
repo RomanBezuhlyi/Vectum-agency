@@ -40,4 +40,17 @@
 	&__list-item {
 		@include center;
 	}
+
+	&__btn {
+		@include box(291px, 68px, 48px);
+		margin: auto;
+		margin-top: 50px;
+		@media (max-width: 767px) {
+			@include box(343px, 51px, 48px);
+			margin-top: 30px;
+		}
+		@media (max-width: 480px) {
+			width: 100%;
+		}
+	}
 }

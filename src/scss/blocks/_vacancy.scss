@@ -97,7 +97,7 @@
 
 	&__content-text {
 		color: $black;
-		@include text-style(20px, 400, 24px);
+		@include text-style(18px, 400, 20px);
 		margin-bottom: 20px;
 		@media (max-width: 767px) {
 			@include text-style(16px, 400, 18px);
@@ -154,7 +154,7 @@
 		a,
 		span {
 			color: $black;
-			@include text-style(20px, 400, 24px);
+			@include text-style(18px, 400, 20px);
 			margin: 2px 0;
 			@media (max-width: 767px) {
 				@include text-style(16px, 400, 18px);

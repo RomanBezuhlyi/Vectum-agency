@@ -7,7 +7,6 @@
 	background-position: center;
 	padding-top: 50px;
 	padding-bottom: 30px;
-	margin-bottom: 50px;
 	@media (max-width: 991px) {
 		padding-top: 20px;
 		padding-bottom: 20px;
@@ -103,12 +102,18 @@
 			display: block;
 			@include text-style(40px, 500, normal);
 			@include transition;
+			@media (max-width: 991px) {
+				color: $accent;
+			}
 		}
 		p {
 			@include text-style(14px, 500, normal);
 			position: relative;
 			top: -4px;
 			@include transition;
+			@media (max-width: 991px) {
+				color: $accent;
+			}
 		}
 	}
 
@@ -132,9 +137,15 @@
 		background: $bg-light;
 		box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.15);
 		@include transition;
+		@media (max-width: 991px) {
+			background: $accent;
+		}
 		svg {
 			fill: $black;
 			@include transition;
+			@media (max-width: 991px) {
+				fill: $white;
+			}
 		}
 	}
 
