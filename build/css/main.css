@@ -4931,8 +4931,8 @@ button {
   }
 }
 .article__content {
-  font-size: 18px;
-  line-height: 1.7;
+  font-size: 16px;
+  line-height: 1.5;
   color: #000;
 }
 .article__content h1,
@@ -5172,8 +5172,8 @@ button {
   }
 }
 .case__content {
-  font-size: 18px;
-  line-height: 1.7;
+  font-size: 16px;
+  line-height: 1.5;
   color: #000;
 }
 .case__content h1,
